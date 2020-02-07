@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Softawares\Bunifu UI WinForms 1.11.0.0\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,14 +48,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="HomeImg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeImg.Designer.cs">
+      <DependentUpon>HomeImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="HomeImg.resx">
+      <DependentUpon>HomeImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,6 +76,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -74,6 +90,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52179266_437670013692992_3396486998402269184_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_woman_man_240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_administrator_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_payment_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_in_hand_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\general_ledger_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_240px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_woman_man_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_group_man_woman_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_male_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_in_hand_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\731632e44bdf21489d4d7632e59a8894.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\731632e44bdf21489d4d7632e59a88941.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1534438327276-14e5300c3a48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
