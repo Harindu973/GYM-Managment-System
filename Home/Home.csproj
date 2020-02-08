@@ -148,5 +148,9 @@
   <ItemGroup>
     <None Include="Resources\search_16px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\card_payment_80px.png" />
+    <None Include="Resources\card_payment_80px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
