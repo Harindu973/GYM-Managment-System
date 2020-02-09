@@ -24,12 +24,19 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            NewMember a = new NewMember();
+            a.Show();
+            this.Hide();
         }
 
         private void homeImg1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

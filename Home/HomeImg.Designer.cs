@@ -50,9 +50,9 @@
             this.label2.Font = new System.Drawing.Font("Georgia", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(112, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(547, 49);
+            this.label2.Size = new System.Drawing.Size(572, 49);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Buil,Trim and Ready to win";
+            this.label2.Text = "Build,Trim and Ready to win";
             // 
             // label1
             // 

@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.homeImg1 = new Home.HomeImg();
-            this.button8 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -42,9 +37,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.homeImg1 = new Home.HomeImg();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,60 +62,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(321, 824);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(321, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(805, 13);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.button8);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.homeImg1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(321, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(805, 812);
-            this.panel3.TabIndex = 3;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Firebrick;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(764, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(38, 33);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // homeImg1
-            // 
-            this.homeImg1.Location = new System.Drawing.Point(0, 1);
-            this.homeImg1.Name = "homeImg1";
-            this.homeImg1.Size = new System.Drawing.Size(805, 812);
-            this.homeImg1.TabIndex = 0;
-            this.homeImg1.Load += new System.EventHandler(this.homeImg1_Load);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Firebrick;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::Home.Properties.Resources.search_16px;
-            this.button8.Location = new System.Drawing.Point(764, 42);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(38, 33);
-            this.button8.TabIndex = 3;
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
@@ -228,6 +174,61 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(321, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(805, 13);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.homeImg1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(321, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(805, 812);
+            this.panel3.TabIndex = 3;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Firebrick;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = global::Home.Properties.Resources.search_16px;
+            this.button8.Location = new System.Drawing.Point(764, 42);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(38, 33);
+            this.button8.TabIndex = 3;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Firebrick;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(764, 3);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(38, 33);
+            this.button7.TabIndex = 2;
+            this.button7.Text = "X";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // homeImg1
+            // 
+            this.homeImg1.Location = new System.Drawing.Point(0, 1);
+            this.homeImg1.Name = "homeImg1";
+            this.homeImg1.Size = new System.Drawing.Size(805, 812);
+            this.homeImg1.TabIndex = 0;
+            this.homeImg1.Load += new System.EventHandler(this.homeImg1_Load);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -242,8 +243,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

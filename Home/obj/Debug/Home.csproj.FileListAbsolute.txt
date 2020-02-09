@@ -11,7 +11,6 @@ D:\Team_FO\FO-GYM-Managment-System\Home\bin\Debug\Bunifu.UI.WinForms.BunifuButto
 D:\Team_FO\FO-GYM-Managment-System\Home\obj\Debug\Home.csproj.CopyComplete
 D:\Team_FO\FO-GYM-Managment-System\Home\obj\Debug\Home.Homepage.resources
 D:\Team_FO\FO-GYM-Managment-System\Home\obj\Debug\Home.HOmeimg.resources
-D:\Team_FO\FO-GYM-Managment-System\Home\obj\Debug\Home.csprojAssemblyReference.cache
 C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\GYM Managment System\Home\bin\Debug\Home.exe.config
 C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\GYM Managment System\Home\bin\Debug\Home.exe
 C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\GYM Managment System\Home\bin\Debug\Home.pdb

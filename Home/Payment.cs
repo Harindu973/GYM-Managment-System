@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Home
 {
-    public partial class NewMember : Form
+    public partial class Payment : Form
     {
-        public NewMember()
+        public Payment()
         {
             InitializeComponent();
-        }
-
-        private void NewMember_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
         }
     }
 }
