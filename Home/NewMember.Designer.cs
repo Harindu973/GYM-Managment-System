@@ -30,7 +30,6 @@
         {
             this.button7 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -62,7 +61,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -74,11 +72,14 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button7
@@ -105,15 +106,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(140, 93);
             this.panel3.TabIndex = 12;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Home.Properties.Resources.login__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 62);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -426,14 +418,6 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Member Photo";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(199, 964);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 37);
-            this.pictureBox2.TabIndex = 41;
-            this.pictureBox2.TabStop = false;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Firebrick;
@@ -553,12 +537,45 @@
             this.textBox9.Size = new System.Drawing.Size(139, 37);
             this.textBox9.TabIndex = 55;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Firebrick;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Home.Properties.Resources.back;
+            this.button4.Location = new System.Drawing.Point(0, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(38, 33);
+            this.button4.TabIndex = 56;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(199, 964);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 37);
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Home.Properties.Resources.login__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 62);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // NewMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1206, 1038);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel14);
@@ -609,11 +626,11 @@
             this.Text = "NewMember";
             this.Load += new System.EventHandler(this.NewMember_Load);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,5 +683,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button button4;
     }
 }

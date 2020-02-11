@@ -92,6 +92,9 @@
     <EmbeddedResource Include="NewMember.resx">
       <DependentUpon>NewMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payment.resx">
+      <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -173,6 +176,8 @@
     <None Include="Resources\search_16px.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\back.png" />
+    <None Include="Resources\back %281%29.png" />
     <Content Include="Resources\card_payment_80px.png" />
     <None Include="Resources\login %281%29.png" />
     <None Include="Resources\login.png" />

@@ -26,5 +26,12 @@ namespace Home
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Homepage a = new Homepage();
+            a.Show();
+            this.Hide();
+        }
     }
 }

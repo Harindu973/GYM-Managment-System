@@ -16,5 +16,22 @@ namespace Home
         {
             InitializeComponent();
         }
+
+        private void Payment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Homepage a = new Homepage();
+            a.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

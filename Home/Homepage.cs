@@ -19,7 +19,9 @@ namespace Home
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Payment a = new Payment();
+            a.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
