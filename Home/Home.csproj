@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encap.cs" />
     <Compile Include="HomeImg.cs">
       <SubType>UserControl</SubType>
     </Compile>
