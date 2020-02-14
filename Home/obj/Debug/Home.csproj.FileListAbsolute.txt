@@ -42,3 +42,19 @@ C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.csproj
 C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.csproj.CopyComplete
 C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.exe
 C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.pdb
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\bin\Debug\Home.exe.config
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\bin\Debug\Home.exe
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\bin\Debug\Home.pdb
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.csprojResolveAssemblyReference.cache
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.HomeImg.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.Homepage.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.Login.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.NewMember.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.Payment.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.Properties.Resources.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.csproj.GenerateResource.Cache
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.exe
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.pdb
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.Attendance.resources
+C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Home\obj\Debug\Home.SMS.resources

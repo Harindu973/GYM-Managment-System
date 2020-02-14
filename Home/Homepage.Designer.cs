@@ -41,7 +41,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.homeImg1 = new Home.HomeImg();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -187,7 +186,6 @@
             // 
             this.panel3.Controls.Add(this.button8);
             this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.homeImg1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(321, 12);
             this.panel3.Name = "panel3";
@@ -221,14 +219,6 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // homeImg1
-            // 
-            this.homeImg1.Location = new System.Drawing.Point(0, 1);
-            this.homeImg1.Name = "homeImg1";
-            this.homeImg1.Size = new System.Drawing.Size(805, 812);
-            this.homeImg1.TabIndex = 0;
-            this.homeImg1.Load += new System.EventHandler(this.homeImg1_Load);
-            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,7 +251,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel3;
-        private HomeImg homeImg1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
     }

@@ -139,6 +139,7 @@
             // 
             this.txtPw.BackColor = System.Drawing.SystemColors.Control;
             this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPw.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPw.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPw.ForeColor = System.Drawing.Color.Firebrick;
             this.txtPw.Location = new System.Drawing.Point(38, 330);
@@ -205,9 +206,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Home.Properties.Resources._52179266_437670013692992_3396486998402269184_o;
-            this.pictureBox2.Location = new System.Drawing.Point(396, 131);
+            this.pictureBox2.Location = new System.Drawing.Point(396, 137);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(341, 433);
+            this.pictureBox2.Size = new System.Drawing.Size(334, 429);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;

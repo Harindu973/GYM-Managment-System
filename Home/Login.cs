@@ -15,8 +15,8 @@ namespace Home
     public partial class Login : Form
     {
 
-        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
-        private Encap Encap;
+        SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Pasindu_san\Documents\Visual Studio 2017\Projects\FO-GYM-Managment-System\FO-GYM-Managment-System\Database\Gym.mdf';Integrated Security=True;Connect Timeout=30");
+
 
         public Login()
         {
