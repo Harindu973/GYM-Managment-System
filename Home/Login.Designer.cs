@@ -35,8 +35,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUname = new System.Windows.Forms.TextBox();
+            this.txtPw = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -123,29 +123,29 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Username";
             // 
-            // textBox1
+            // txtUname
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Firebrick;
-            this.textBox1.Location = new System.Drawing.Point(38, 235);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 37);
-            this.textBox1.TabIndex = 5;
+            this.txtUname.BackColor = System.Drawing.SystemColors.Control;
+            this.txtUname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUname.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUname.ForeColor = System.Drawing.Color.Firebrick;
+            this.txtUname.Location = new System.Drawing.Point(38, 235);
+            this.txtUname.Multiline = true;
+            this.txtUname.Name = "txtUname";
+            this.txtUname.Size = new System.Drawing.Size(272, 37);
+            this.txtUname.TabIndex = 5;
             // 
-            // textBox2
+            // txtPw
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Firebrick;
-            this.textBox2.Location = new System.Drawing.Point(38, 330);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 37);
-            this.textBox2.TabIndex = 7;
+            this.txtPw.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPw.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPw.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPw.ForeColor = System.Drawing.Color.Firebrick;
+            this.txtPw.Location = new System.Drawing.Point(38, 330);
+            this.txtPw.Multiline = true;
+            this.txtPw.Name = "txtPw";
+            this.txtPw.Size = new System.Drawing.Size(272, 37);
+            this.txtPw.TabIndex = 7;
             // 
             // label3
             // 
@@ -186,6 +186,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -234,9 +235,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPw);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panel3);
@@ -265,8 +266,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUname;
+        private System.Windows.Forms.TextBox txtPw;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
