@@ -50,10 +50,10 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(597, 164);
+            this.textBox1.Location = new System.Drawing.Point(597, 223);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 534);
+            this.textBox1.Size = new System.Drawing.Size(93, 475);
             this.textBox1.TabIndex = 21;
             // 
             // button8
@@ -64,7 +64,7 @@
             this.button8.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.Control;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(578, 732);
+            this.button8.Location = new System.Drawing.Point(597, 729);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(20);
             this.button8.Size = new System.Drawing.Size(184, 64);
@@ -79,7 +79,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(785, 732);
+            this.button2.Location = new System.Drawing.Point(804, 729);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 64);
             this.button2.TabIndex = 83;
@@ -156,6 +156,7 @@
             this.textBox8.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.ForeColor = System.Drawing.Color.Firebrick;
             this.textBox8.Location = new System.Drawing.Point(32, 84);
+            this.textBox8.MaxLength = 10;
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(285, 34);
@@ -192,9 +193,10 @@
             this.textBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Firebrick;
             this.textBox2.Location = new System.Drawing.Point(428, 85);
+            this.textBox2.MaxLength = 10;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 33);
+            this.textBox2.Size = new System.Drawing.Size(155, 33);
             this.textBox2.TabIndex = 112;
             // 
             // button7
@@ -204,7 +206,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Location = new System.Drawing.Point(578, 813);
+            this.button7.Location = new System.Drawing.Point(597, 810);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(20);
             this.button7.Size = new System.Drawing.Size(375, 62);
@@ -250,7 +252,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Name = "SMS";
-            this.Size = new System.Drawing.Size(981, 979);
+            this.Size = new System.Drawing.Size(1102, 958);
             this.ResumeLayout(false);
             this.PerformLayout();
 
