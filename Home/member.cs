@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Emgu.CV;
 using Emgu.CV.Structure;
+using System.IO;
+using Emgu.CV.Cuda;
 
 namespace Home
 {
@@ -17,6 +19,8 @@ namespace Home
     {
 
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
+        string ValueOfCombo;
+
 
         public member()
         {
@@ -27,9 +31,8 @@ namespace Home
         {
            
 
-
             string Fname = txtName.Text;
-            string Pack = comboBox1.SelectedText;
+            string Pack = ValueOfCombo;
             string Nic = txtNic.Text;
             string Phone = txtTp.Text;
             string Age = txtAge.Text;
@@ -58,11 +61,16 @@ namespace Home
 
 
 
+
+
+                Image pic = ImageToByte(picOutput.Image);
+
+
                 conn.Open();
        
-                string query = "INSERT INTO Members values('" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',' ','" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
+                string query = "INSERT INTO Members values('" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "','@images','" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
                 SqlCommand cmd = new SqlCommand(query, conn);
-               // cmd.Parameters.Add(new SqlParameter("@images", images));
+                cmd.Parameters.Add(new SqlParameter("@images", picOutput.Image);
 
 
     
@@ -255,6 +263,11 @@ namespace Home
 
         }
 
+        private Image ImageToByte(Image image)
+        {
+            throw new NotImplementedException();
+        }
+
         private void btnCapture_Click(object sender, EventArgs e)
         {
             Capture capture = new Capture();
@@ -262,6 +275,30 @@ namespace Home
             var bmp = img.Bitmap;
             picOutput.Image = bmp;
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ValueOfCombo = comboBox1.Text;
+        }
+
+
+
+
+        public static byte[] ImageToByte2(Image img)
+        {
+            byte[] byteArray = new byte[0];
+            using (MemoryStream stream = new MemoryStream())
+            {
+                img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                stream.Close();
+
+                byteArray = stream.ToArray();
+            }
+            return byteArray;
+        }
+
+
+
     }
     
 }

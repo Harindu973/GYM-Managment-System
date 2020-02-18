@@ -69,7 +69,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboDesig = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOutput)).BeginInit();
             this.panel2.SuspendLayout();
@@ -501,36 +500,17 @@
             "Body Building",
             "Anually",
             "6 Month"});
-            this.comboBox1.Location = new System.Drawing.Point(471, 773);
+            this.comboBox1.Location = new System.Drawing.Point(188, 776);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 24);
+            this.comboBox1.Size = new System.Drawing.Size(225, 24);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.Text = "Package";
-            // 
-            // comboDesig
-            // 
-            this.comboDesig.FormattingEnabled = true;
-            this.comboDesig.Items.AddRange(new object[] {
-            "Manager",
-            "Accountan",
-            "Senior Employee",
-            "Junior Employee",
-            "Unpermanent Employee",
-            "Temporary Employee",
-            "Driver",
-            "Security",
-            "Assistant Manager"});
-            this.comboDesig.Location = new System.Drawing.Point(168, 776);
-            this.comboDesig.Name = "comboDesig";
-            this.comboDesig.Size = new System.Drawing.Size(242, 24);
-            this.comboDesig.TabIndex = 10;
-            this.comboDesig.TabStop = false;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboDesig);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtCid);
@@ -621,6 +601,5 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboDesig;
     }
 }
