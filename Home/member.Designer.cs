@@ -60,18 +60,18 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picOutput = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCid = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCapture = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboDesig = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOutput)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -394,14 +394,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(165, 677);
             this.dataGridView1.TabIndex = 92;
             // 
-            // pictureBox2
+            // picOutput
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(557, 58);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(165, 256);
-            this.pictureBox2.TabIndex = 91;
-            this.pictureBox2.TabStop = false;
+            this.picOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picOutput.Location = new System.Drawing.Point(557, 58);
+            this.picOutput.Name = "picOutput";
+            this.picOutput.Size = new System.Drawing.Size(184, 222);
+            this.picOutput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picOutput.TabIndex = 91;
+            this.picOutput.TabStop = false;
             // 
             // panel1
             // 
@@ -437,7 +438,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.btnCapture);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Location = new System.Drawing.Point(583, 769);
@@ -445,20 +446,21 @@
             this.panel2.Size = new System.Drawing.Size(443, 146);
             this.panel2.TabIndex = 100;
             // 
-            // button3
+            // btnCapture
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(39, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 52);
-            this.button3.TabIndex = 98;
-            this.button3.Text = "Take a Photo";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnCapture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnCapture.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCapture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCapture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapture.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapture.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCapture.Location = new System.Drawing.Point(39, 18);
+            this.btnCapture.Name = "btnCapture";
+            this.btnCapture.Size = new System.Drawing.Size(174, 52);
+            this.btnCapture.TabIndex = 98;
+            this.btnCapture.Text = "Take a Photo";
+            this.btnCapture.UseVisualStyleBackColor = false;
+            this.btnCapture.Click += new System.EventHandler(this.btnCapture_Click);
             // 
             // button2
             // 
@@ -535,7 +537,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picOutput);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.label12);
@@ -570,7 +572,7 @@
             this.Name = "member";
             this.Size = new System.Drawing.Size(1050, 979);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOutput)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -608,14 +610,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picOutput;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCid;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCapture;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;

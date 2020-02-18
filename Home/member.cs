@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Emgu.CV;
+using Emgu.CV.Structure;
 
 namespace Home
 {
@@ -23,7 +25,7 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
 
 
             string Fname = txtName.Text;
@@ -251,6 +253,14 @@ namespace Home
 
 
 
+        }
+
+        private void btnCapture_Click(object sender, EventArgs e)
+        {
+            Capture capture = new Capture();
+            var img = capture.QueryFrame().ToImage<Bgr, byte>();
+            var bmp = img.Bitmap;
+            picOutput.Image = bmp;
         }
     }
     
