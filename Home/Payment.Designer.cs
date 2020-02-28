@@ -47,8 +47,11 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFees = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -60,14 +63,11 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
@@ -289,15 +289,15 @@
             this.label2.TabIndex = 111;
             this.label2.Text = "Member Fees";
             // 
-            // dataGridView1
+            // dgvFees
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 245);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(552, 106);
-            this.dataGridView1.TabIndex = 113;
+            this.dgvFees.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dgvFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFees.Location = new System.Drawing.Point(18, 245);
+            this.dgvFees.Name = "dgvFees";
+            this.dgvFees.RowTemplate.Height = 24;
+            this.dgvFees.Size = new System.Drawing.Size(552, 106);
+            this.dgvFees.TabIndex = 113;
             // 
             // panel1
             // 
@@ -305,7 +305,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvFees);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.comboBox2);
@@ -321,6 +321,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(587, 954);
             this.panel1.TabIndex = 111;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Firebrick;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(346, 807);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(20);
+            this.button2.Size = new System.Drawing.Size(109, 64);
+            this.button2.TabIndex = 124;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Firebrick;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(461, 807);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(109, 64);
+            this.button4.TabIndex = 123;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Firebrick;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(359, 157);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(55, 51);
+            this.button3.TabIndex = 110;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // panel12
             // 
@@ -451,15 +494,6 @@
             this.panel8.Size = new System.Drawing.Size(324, 816);
             this.panel8.TabIndex = 112;
             // 
-            // panel4
-            // 
-            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.BackColor = System.Drawing.Color.Firebrick;
-            this.panel4.Location = new System.Drawing.Point(656, 23);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(3, 804);
-            this.panel4.TabIndex = 98;
-            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Firebrick;
@@ -488,49 +522,16 @@
             this.button9.Size = new System.Drawing.Size(109, 64);
             this.button9.TabIndex = 119;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button2
+            // panel4
             // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(346, 807);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20);
-            this.button2.Size = new System.Drawing.Size(109, 64);
-            this.button2.TabIndex = 124;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(461, 807);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 64);
-            this.button4.TabIndex = 123;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(359, 157);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 51);
-            this.button3.TabIndex = 110;
-            this.button3.UseVisualStyleBackColor = false;
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.BackColor = System.Drawing.Color.Firebrick;
+            this.panel4.Location = new System.Drawing.Point(656, 23);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(3, 804);
+            this.panel4.TabIndex = 98;
             // 
             // payment
             // 
@@ -541,9 +542,10 @@
             this.Controls.Add(this.panel4);
             this.Name = "payment";
             this.Size = new System.Drawing.Size(1102, 958);
+            this.Load += new System.EventHandler(this.payment_Load);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -573,7 +575,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvFees;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;

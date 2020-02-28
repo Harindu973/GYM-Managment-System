@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Attendance_Recods));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAttRec = new System.Windows.Forms.DataGridView();
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttRec)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvAttRec
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvAttRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 140);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(521, 725);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvAttRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAttRec.Location = new System.Drawing.Point(120, 140);
+            this.dgvAttRec.Name = "dgvAttRec";
+            this.dgvAttRec.RowTemplate.Height = 24;
+            this.dgvAttRec.Size = new System.Drawing.Size(521, 725);
+            this.dgvAttRec.TabIndex = 0;
             // 
             // panel13
             // 
@@ -91,6 +91,7 @@
             this.button3.Size = new System.Drawing.Size(55, 51);
             this.button3.TabIndex = 127;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Attendance_Recods
             // 
@@ -100,10 +101,11 @@
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAttRec);
             this.Name = "Attendance_Recods";
             this.Size = new System.Drawing.Size(1102, 958);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Attendance_Recods_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAttRec)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,7 +113,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAttRec;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox textBox8;
