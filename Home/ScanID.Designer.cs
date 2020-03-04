@@ -96,7 +96,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Home.Properties.Resources.;
+           // this.pictureBox6.Image = global::Home.Properties.Resources.;
             this.pictureBox6.Location = new System.Drawing.Point(33, 11);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(66, 69);

@@ -17,6 +17,8 @@ namespace Home
     {
 
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
+        string ValueOfCombo;
+
 
         public member()
         {
@@ -31,7 +33,7 @@ namespace Home
 
             string MemID = txtMemID.Text;
             string Fname = txtName.Text;
-            string Pack = comboBox1.SelectedText;
+            string Pack = ValueOfCombo;
             string Nic = txtNic.Text;
             string Phone = txtTp.Text;
             string Age = txtAge.Text;
@@ -41,9 +43,11 @@ namespace Home
             string Cid = txtCid.Text;
             string Email = txtMail.Text;
             string Gender;
+            
 
 
-            if (MemID == string.Empty || Fname == string.Empty || Nic == string.Empty || Phone == string.Empty || Add == string.Empty || Age == string.Empty || Weight == string.Empty || Height == string.Empty || Email == string.Empty || Cid == string.Empty)
+
+            if (MemID == string.Empty || Fname == string.Empty || Nic == string.Empty || Pack == string.Empty || Phone == string.Empty || Add == string.Empty || Age == string.Empty || Weight == string.Empty || Height == string.Empty || Email == string.Empty || Cid == string.Empty)
             {
                 MessageBox.Show("Some fileds are empty !!");
             }
@@ -309,8 +313,10 @@ namespace Home
             conn.Close();
         }
 
-
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ValueOfCombo = comboBox1.Text;
+        }
     }
     
 }

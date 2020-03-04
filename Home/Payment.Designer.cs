@@ -34,17 +34,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvFees = new System.Windows.Forms.DataGridView();
@@ -66,7 +55,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -120,141 +108,6 @@
             this.panel13.Size = new System.Drawing.Size(292, 3);
             this.panel13.TabIndex = 102;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(29, 778);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 28);
-            this.label12.TabIndex = 103;
-            this.label12.Text = "Package Type";
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Firebrick;
-            this.panel14.Controls.Add(this.comboBox3);
-            this.panel14.Controls.Add(this.button5);
-            this.panel14.Controls.Add(this.comboBox4);
-            this.panel14.Controls.Add(this.panel5);
-            this.panel14.Controls.Add(this.label4);
-            this.panel14.Controls.Add(this.panel6);
-            this.panel14.Controls.Add(this.label5);
-            this.panel14.Controls.Add(this.panel7);
-            this.panel14.Location = new System.Drawing.Point(31, 854);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(292, 3);
-            this.panel14.TabIndex = 104;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "January",
-            "Februry",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.comboBox3.Location = new System.Drawing.Point(3, -76);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(205, 24);
-            this.comboBox3.TabIndex = 80;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Firebrick;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(3, 144);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 52);
-            this.button5.TabIndex = 79;
-            this.button5.Text = "Done";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Cardio + Body Building (Monthly)",
-            "Body Building (Monthly)",
-            "Anually",
-            "6 Month",
-            "Daily"});
-            this.comboBox4.Location = new System.Drawing.Point(3, 50);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(288, 28);
-            this.comboBox4.TabIndex = 78;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Firebrick;
-            this.panel5.Location = new System.Drawing.Point(3, 109);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(292, 3);
-            this.panel5.TabIndex = 77;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-2, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 28);
-            this.label4.TabIndex = 76;
-            this.label4.Text = "Package Type";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Firebrick;
-            this.panel6.Location = new System.Drawing.Point(3, -146);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(292, 3);
-            this.panel6.TabIndex = 75;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-2, -194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 28);
-            this.label5.TabIndex = 74;
-            this.label5.Text = "Member ID";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Firebrick;
-            this.panel7.Location = new System.Drawing.Point(3, -29);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(292, 3);
-            this.panel7.TabIndex = 73;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cardio + Body Building (Monthly)",
-            "Body Building (Monthly)",
-            "Anually",
-            "6 Month",
-            "Daily"});
-            this.comboBox1.Location = new System.Drawing.Point(31, 820);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(288, 28);
-            this.comboBox1.TabIndex = 105;
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -275,6 +128,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(205, 24);
             this.comboBox2.TabIndex = 109;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -309,9 +163,6 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.panel14);
-            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.panel13);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label11);
@@ -336,6 +187,7 @@
             this.button2.Size = new System.Drawing.Size(109, 64);
             this.button2.TabIndex = 124;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -350,6 +202,7 @@
             this.button4.Size = new System.Drawing.Size(109, 64);
             this.button4.TabIndex = 123;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -364,6 +217,7 @@
             this.button3.Size = new System.Drawing.Size(55, 51);
             this.button3.TabIndex = 110;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel12
             // 
@@ -543,8 +397,6 @@
             this.Name = "payment";
             this.Size = new System.Drawing.Size(1102, 958);
             this.Load += new System.EventHandler(this.payment_Load);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -561,17 +413,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;

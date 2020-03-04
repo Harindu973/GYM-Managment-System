@@ -498,6 +498,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Monthly"});
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Cardio + Body Building (Monthly)",
@@ -509,6 +511,7 @@
             this.comboBox1.Size = new System.Drawing.Size(247, 24);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.Text = "Package";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtMemID
             // 
