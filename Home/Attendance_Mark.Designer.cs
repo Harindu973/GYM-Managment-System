@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Attendance_Mark));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMark = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMark)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMark
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(106, 196);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(882, 671);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvMark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMark.Location = new System.Drawing.Point(106, 196);
+            this.dgvMark.Name = "dgvMark";
+            this.dgvMark.RowTemplate.Height = 24;
+            this.dgvMark.Size = new System.Drawing.Size(882, 671);
+            this.dgvMark.TabIndex = 0;
             // 
             // button3
             // 
@@ -59,6 +59,7 @@
             this.button3.Size = new System.Drawing.Size(64, 51);
             this.button3.TabIndex = 131;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel13
             // 
@@ -98,10 +99,11 @@
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMark);
             this.Name = "Attendance_Mark";
             this.Size = new System.Drawing.Size(1102, 958);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Attendance_Mark_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMark)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,7 +111,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMark;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox textBox8;

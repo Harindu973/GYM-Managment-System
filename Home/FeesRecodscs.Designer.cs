@@ -33,9 +33,9 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFees = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -79,16 +79,16 @@
             this.label11.Text = "Member ID";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // dataGridView1
+            // dgvFees
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvFees.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(141, 235);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(473, 639);
-            this.dataGridView1.TabIndex = 121;
+            this.dgvFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFees.Location = new System.Drawing.Point(141, 235);
+            this.dgvFees.Name = "dgvFees";
+            this.dgvFees.RowTemplate.Height = 24;
+            this.dgvFees.Size = new System.Drawing.Size(473, 639);
+            this.dgvFees.TabIndex = 121;
             // 
             // button3
             // 
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFees);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel13);
@@ -118,7 +118,7 @@
             this.Name = "FeesRecodscs";
             this.Size = new System.Drawing.Size(1102, 958);
             this.Load += new System.EventHandler(this.FeesRecodscs_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +131,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvFees;
     }
 }

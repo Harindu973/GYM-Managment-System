@@ -17,19 +17,23 @@ namespace Home
     {
 
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
+        string ValueOfCombo;
+
 
         public member()
         {
+            
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
 
 
+            string MemID = txtMemID.Text;
             string Fname = txtName.Text;
-            string Pack = comboBox1.SelectedText;
+            string Pack = ValueOfCombo;
             string Nic = txtNic.Text;
             string Phone = txtTp.Text;
             string Age = txtAge.Text;
@@ -39,9 +43,11 @@ namespace Home
             string Cid = txtCid.Text;
             string Email = txtMail.Text;
             string Gender;
+            
 
 
-            if (Fname == string.Empty || Nic == string.Empty || Phone == string.Empty || Add == string.Empty || Age == string.Empty || Weight == string.Empty || Height == string.Empty || Email == string.Empty || Cid == string.Empty)
+
+            if (MemID == string.Empty || Fname == string.Empty || Nic == string.Empty || Pack == string.Empty || Phone == string.Empty || Add == string.Empty || Age == string.Empty || Weight == string.Empty || Height == string.Empty || Email == string.Empty || Cid == string.Empty)
             {
                 MessageBox.Show("Some fileds are empty !!");
             }
@@ -60,7 +66,7 @@ namespace Home
 
                 conn.Open();
        
-                string query = "INSERT INTO Members values('" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',' ','" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
+                string query = "INSERT INTO Members values('" + MemID + "','" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',' ','" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
                 SqlCommand cmd = new SqlCommand(query, conn);
                // cmd.Parameters.Add(new SqlParameter("@images", images));
 
@@ -261,6 +267,55 @@ namespace Home
             var img = capture.QueryFrame().ToImage<Bgr, byte>();
             var bmp = img.Bitmap;
             picOutput.Image = bmp;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            // string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age FROM Members";
+            // SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            // DataSet ds = new DataSet();
+
+
+            /* da.Fill(ds, "Members");
+             dgvMembers.DataSource = ds.Tables["Members"];
+
+
+     */
+
+
+            string qry = "SELECT * From Members";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Members");
+            dgvMembers.DataSource = ds.Tables["Members"];
+
+
+
+            conn.Close();
+        }
+
+        private void member_Load(object sender, EventArgs e)
+        {
+            conn.Open();
+
+
+            string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age,Weight,Height From Members";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Members");
+            dgvMembers.DataSource = ds.Tables["Members"];
+
+
+
+            conn.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ValueOfCombo = comboBox1.Text;
         }
     }
     

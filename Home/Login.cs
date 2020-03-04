@@ -16,7 +16,7 @@ namespace Home
     {
 
         SqlConnection constring = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Bhashitha\OneDrive\Desktop\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
-        private Encap Encap;
+        
 
         public Login()
         {

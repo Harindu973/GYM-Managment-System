@@ -59,7 +59,7 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMembers = new System.Windows.Forms.DataGridView();
             this.picOutput = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,8 +69,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboDesig = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtMemID = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOutput)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -81,18 +83,18 @@
             this.txtNic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNic.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNic.ForeColor = System.Drawing.Color.Black;
-            this.txtNic.Location = new System.Drawing.Point(141, 130);
+            this.txtNic.Location = new System.Drawing.Point(151, 196);
             this.txtNic.Multiline = true;
             this.txtNic.Name = "txtNic";
-            this.txtNic.Size = new System.Drawing.Size(395, 37);
+            this.txtNic.Size = new System.Drawing.Size(283, 37);
             this.txtNic.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Firebrick;
-            this.panel4.Location = new System.Drawing.Point(32, 101);
+            this.panel4.Location = new System.Drawing.Point(42, 167);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(500, 3);
+            this.panel4.Size = new System.Drawing.Size(392, 3);
             this.panel4.TabIndex = 62;
             // 
             // txtTp
@@ -101,18 +103,18 @@
             this.txtTp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTp.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTp.ForeColor = System.Drawing.Color.Black;
-            this.txtTp.Location = new System.Drawing.Point(177, 629);
+            this.txtTp.Location = new System.Drawing.Point(191, 662);
             this.txtTp.Multiline = true;
             this.txtTp.Name = "txtTp";
-            this.txtTp.Size = new System.Drawing.Size(355, 37);
+            this.txtTp.Size = new System.Drawing.Size(243, 37);
             this.txtTp.TabIndex = 8;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.Firebrick;
-            this.panel13.Location = new System.Drawing.Point(36, 598);
+            this.panel13.Location = new System.Drawing.Point(42, 640);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(500, 3);
+            this.panel13.Size = new System.Drawing.Size(392, 3);
             this.panel13.TabIndex = 84;
             // 
             // txtHeight
@@ -121,17 +123,17 @@
             this.txtHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtHeight.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeight.ForeColor = System.Drawing.Color.Black;
-            this.txtHeight.Location = new System.Drawing.Point(109, 555);
+            this.txtHeight.Location = new System.Drawing.Point(151, 597);
             this.txtHeight.Multiline = true;
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(423, 37);
+            this.txtHeight.Size = new System.Drawing.Size(283, 37);
             this.txtHeight.TabIndex = 7;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(27, 555);
+            this.label11.Location = new System.Drawing.Point(37, 602);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 28);
             this.label11.TabIndex = 82;
@@ -140,9 +142,9 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Firebrick;
-            this.panel12.Location = new System.Drawing.Point(36, 525);
+            this.panel12.Location = new System.Drawing.Point(42, 580);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(500, 3);
+            this.panel12.Size = new System.Drawing.Size(392, 3);
             this.panel12.TabIndex = 81;
             // 
             // txtWeight
@@ -151,17 +153,17 @@
             this.txtWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtWeight.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWeight.ForeColor = System.Drawing.Color.Black;
-            this.txtWeight.Location = new System.Drawing.Point(109, 482);
+            this.txtWeight.Location = new System.Drawing.Point(151, 537);
             this.txtWeight.Multiline = true;
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(423, 37);
+            this.txtWeight.Size = new System.Drawing.Size(283, 37);
             this.txtWeight.TabIndex = 6;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 482);
+            this.label10.Location = new System.Drawing.Point(37, 537);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 28);
             this.label10.TabIndex = 79;
@@ -170,9 +172,9 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Firebrick;
-            this.panel10.Location = new System.Drawing.Point(32, 750);
+            this.panel10.Location = new System.Drawing.Point(42, 769);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(500, 3);
+            this.panel10.Size = new System.Drawing.Size(392, 3);
             this.panel10.TabIndex = 78;
             // 
             // txtMail
@@ -181,25 +183,25 @@
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMail.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMail.ForeColor = System.Drawing.Color.Black;
-            this.txtMail.Location = new System.Drawing.Point(92, 707);
+            this.txtMail.Location = new System.Drawing.Point(151, 726);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(440, 37);
+            this.txtMail.Size = new System.Drawing.Size(283, 37);
             this.txtMail.TabIndex = 9;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Firebrick;
-            this.panel9.Location = new System.Drawing.Point(32, 672);
+            this.panel9.Location = new System.Drawing.Point(42, 705);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(500, 3);
+            this.panel9.Size = new System.Drawing.Size(392, 3);
             this.panel9.TabIndex = 75;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 707);
+            this.label8.Location = new System.Drawing.Point(37, 726);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 28);
             this.label8.TabIndex = 76;
@@ -208,16 +210,16 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Firebrick;
-            this.panel8.Location = new System.Drawing.Point(36, 451);
+            this.panel8.Location = new System.Drawing.Point(42, 517);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(500, 3);
+            this.panel8.Size = new System.Drawing.Size(392, 3);
             this.panel8.TabIndex = 71;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 629);
+            this.label7.Location = new System.Drawing.Point(41, 662);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 28);
             this.label7.TabIndex = 72;
@@ -229,25 +231,25 @@
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.Location = new System.Drawing.Point(36, 367);
+            this.txtAddress.Location = new System.Drawing.Point(151, 402);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(496, 78);
+            this.txtAddress.Size = new System.Drawing.Size(283, 109);
             this.txtAddress.TabIndex = 5;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Firebrick;
-            this.panel7.Location = new System.Drawing.Point(32, 311);
+            this.panel7.Location = new System.Drawing.Point(42, 373);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(500, 3);
+            this.panel7.Size = new System.Drawing.Size(392, 3);
             this.panel7.TabIndex = 67;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 336);
+            this.label6.Location = new System.Drawing.Point(41, 402);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 28);
             this.label6.TabIndex = 66;
@@ -256,7 +258,7 @@
             // Fmale
             // 
             this.Fmale.AutoSize = true;
-            this.Fmale.Location = new System.Drawing.Point(356, 276);
+            this.Fmale.Location = new System.Drawing.Point(250, 342);
             this.Fmale.Name = "Fmale";
             this.Fmale.Size = new System.Drawing.Size(75, 21);
             this.Fmale.TabIndex = 4;
@@ -267,7 +269,7 @@
             // Rmale
             // 
             this.Rmale.AutoSize = true;
-            this.Rmale.Location = new System.Drawing.Point(235, 276);
+            this.Rmale.Location = new System.Drawing.Point(151, 342);
             this.Rmale.Name = "Rmale";
             this.Rmale.Size = new System.Drawing.Size(59, 21);
             this.Rmale.TabIndex = 3;
@@ -279,7 +281,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 276);
+            this.label5.Location = new System.Drawing.Point(41, 342);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 28);
             this.label5.TabIndex = 68;
@@ -288,9 +290,9 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Firebrick;
-            this.panel6.Location = new System.Drawing.Point(36, 241);
+            this.panel6.Location = new System.Drawing.Point(42, 311);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(500, 3);
+            this.panel6.Size = new System.Drawing.Size(392, 3);
             this.panel6.TabIndex = 65;
             // 
             // txtAge
@@ -299,17 +301,17 @@
             this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAge.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAge.ForeColor = System.Drawing.Color.Black;
-            this.txtAge.Location = new System.Drawing.Point(141, 201);
+            this.txtAge.Location = new System.Drawing.Point(151, 267);
             this.txtAge.Multiline = true;
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(395, 37);
+            this.txtAge.Size = new System.Drawing.Size(283, 37);
             this.txtAge.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 198);
+            this.label4.Location = new System.Drawing.Point(41, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 28);
             this.label4.TabIndex = 63;
@@ -318,16 +320,16 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Firebrick;
-            this.panel5.Location = new System.Drawing.Point(36, 174);
+            this.panel5.Location = new System.Drawing.Point(42, 239);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(500, 3);
+            this.panel5.Size = new System.Drawing.Size(392, 3);
             this.panel5.TabIndex = 61;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 135);
+            this.label3.Location = new System.Drawing.Point(45, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 28);
             this.label3.TabIndex = 60;
@@ -339,17 +341,17 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.Location = new System.Drawing.Point(137, 58);
+            this.txtName.Location = new System.Drawing.Point(151, 124);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(395, 37);
+            this.txtName.Size = new System.Drawing.Size(283, 37);
             this.txtName.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 58);
+            this.label2.Location = new System.Drawing.Point(41, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 28);
             this.label2.TabIndex = 58;
@@ -358,16 +360,16 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.Firebrick;
-            this.panel14.Location = new System.Drawing.Point(32, 835);
+            this.panel14.Location = new System.Drawing.Point(42, 822);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(500, 3);
+            this.panel14.Size = new System.Drawing.Size(392, 3);
             this.panel14.TabIndex = 88;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(31, 769);
+            this.label12.Location = new System.Drawing.Point(41, 785);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(131, 28);
             this.label12.TabIndex = 87;
@@ -377,29 +379,29 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(578, 341);
+            this.label9.Location = new System.Drawing.Point(466, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(144, 28);
             this.label9.TabIndex = 90;
             this.label9.Text = "Member Photo";
             // 
-            // dataGridView1
+            // dgvMembers
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvMembers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(761, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(165, 677);
-            this.dataGridView1.TabIndex = 92;
+            this.dgvMembers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMembers.Location = new System.Drawing.Point(641, 58);
+            this.dgvMembers.Name = "dgvMembers";
+            this.dgvMembers.RowTemplate.Height = 24;
+            this.dgvMembers.Size = new System.Drawing.Size(10, 677);
+            this.dgvMembers.TabIndex = 92;
             // 
             // picOutput
             // 
             this.picOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picOutput.Location = new System.Drawing.Point(557, 58);
+            this.picOutput.Location = new System.Drawing.Point(455, 62);
             this.picOutput.Name = "picOutput";
-            this.picOutput.Size = new System.Drawing.Size(184, 222);
+            this.picOutput.Size = new System.Drawing.Size(169, 222);
             this.picOutput.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picOutput.TabIndex = 91;
             this.picOutput.TabStop = false;
@@ -407,16 +409,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
-            this.panel1.Location = new System.Drawing.Point(32, 902);
+            this.panel1.Location = new System.Drawing.Point(42, 883);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 3);
+            this.panel1.Size = new System.Drawing.Size(392, 3);
             this.panel1.TabIndex = 98;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 859);
+            this.label1.Location = new System.Drawing.Point(41, 845);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 28);
             this.label1.TabIndex = 96;
@@ -428,10 +430,10 @@
             this.txtCid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCid.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCid.ForeColor = System.Drawing.Color.Black;
-            this.txtCid.Location = new System.Drawing.Point(114, 861);
+            this.txtCid.Location = new System.Drawing.Point(151, 847);
             this.txtCid.MaxLength = 10;
             this.txtCid.Name = "txtCid";
-            this.txtCid.Size = new System.Drawing.Size(418, 30);
+            this.txtCid.Size = new System.Drawing.Size(283, 30);
             this.txtCid.TabIndex = 12;
             // 
             // panel2
@@ -441,7 +443,7 @@
             this.panel2.Controls.Add(this.btnCapture);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(583, 769);
+            this.panel2.Location = new System.Drawing.Point(489, 769);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(443, 146);
             this.panel2.TabIndex = 100;
@@ -476,6 +478,7 @@
             this.button2.TabIndex = 97;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -495,48 +498,64 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Monthly"});
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Cardio + Body Building (Monthly)",
             "Body Building",
             "Anually",
             "6 Month"});
-            this.comboBox1.Location = new System.Drawing.Point(471, 773);
+            this.comboBox1.Location = new System.Drawing.Point(187, 792);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 24);
+            this.comboBox1.Size = new System.Drawing.Size(247, 24);
             this.comboBox1.TabIndex = 11;
             this.comboBox1.Text = "Package";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboDesig
+            // txtMemID
             // 
-            this.comboDesig.FormattingEnabled = true;
-            this.comboDesig.Items.AddRange(new object[] {
-            "Manager",
-            "Accountan",
-            "Senior Employee",
-            "Junior Employee",
-            "Unpermanent Employee",
-            "Temporary Employee",
-            "Driver",
-            "Security",
-            "Assistant Manager"});
-            this.comboDesig.Location = new System.Drawing.Point(168, 776);
-            this.comboDesig.Name = "comboDesig";
-            this.comboDesig.Size = new System.Drawing.Size(242, 24);
-            this.comboDesig.TabIndex = 10;
-            this.comboDesig.TabStop = false;
+            this.txtMemID.BackColor = System.Drawing.SystemColors.Control;
+            this.txtMemID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMemID.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMemID.ForeColor = System.Drawing.Color.Black;
+            this.txtMemID.Location = new System.Drawing.Point(151, 65);
+            this.txtMemID.MaxLength = 10;
+            this.txtMemID.Name = "txtMemID";
+            this.txtMemID.Size = new System.Drawing.Size(283, 30);
+            this.txtMemID.TabIndex = 101;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Firebrick;
+            this.panel3.Location = new System.Drawing.Point(42, 103);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(392, 3);
+            this.panel3.TabIndex = 103;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(41, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 28);
+            this.label13.TabIndex = 102;
+            this.label13.Text = "Member ID";
             // 
             // member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboDesig);
+            this.Controls.Add(this.txtMemID);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtCid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMembers);
             this.Controls.Add(this.picOutput);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel14);
@@ -571,7 +590,8 @@
             this.Controls.Add(this.label2);
             this.Name = "member";
             this.Size = new System.Drawing.Size(1050, 979);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.member_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOutput)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -612,7 +632,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox picOutput;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMembers;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCid;
@@ -621,6 +641,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboDesig;
+        private System.Windows.Forms.TextBox txtMemID;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label13;
     }
 }

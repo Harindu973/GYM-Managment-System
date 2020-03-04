@@ -92,6 +92,7 @@
             this.button3.Size = new System.Drawing.Size(70, 57);
             this.button3.TabIndex = 114;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -119,6 +120,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Member_Recods";
             this.Size = new System.Drawing.Size(1102, 958);
+            this.Load += new System.EventHandler(this.Member_Recods_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

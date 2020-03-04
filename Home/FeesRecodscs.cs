@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Home
 {
     public partial class FeesRecodscs : UserControl
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
+
         public FeesRecodscs()
         {
             InitializeComponent();
@@ -19,6 +22,23 @@ namespace Home
 
         private void FeesRecodscs_Load(object sender, EventArgs e)
         {
+
+            conn.Open();
+
+
+            string qry = "SELECT * From Payments";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Payments");
+            dgvFees.DataSource = ds.Tables["Payments"];
+
+
+
+            conn.Close();
+
+
+
 
         }
 
@@ -39,6 +59,19 @@ namespace Home
 
         private void button3_Click(object sender, EventArgs e)
         {
+            conn.Open();
+
+
+            string qry = "SELECT * From Payments  where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "' ";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Payments");
+            dgvFees.DataSource = ds.Tables["Payments"];
+
+
+
+            conn.Close();
 
         }
     }
