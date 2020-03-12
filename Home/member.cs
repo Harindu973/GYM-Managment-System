@@ -43,7 +43,8 @@ namespace Home
             string Cid = txtCid.Text;
             string Email = txtMail.Text;
             string Gender;
-            
+            capture.Dispose();
+
 
 
 
@@ -231,6 +232,7 @@ namespace Home
                     txtHeight.Text = "";
                     txtMail.Text = "";
                     txtCid.Text = "";
+                    picOutput.Image = null;
 
                 }
                 catch (SqlException ex)
@@ -253,47 +255,63 @@ namespace Home
             }
 
 
-
-
-
-
-
-
         }
 
+
+
+        Capture capture = new Capture();
         private void btnCapture_Click(object sender, EventArgs e)
         {
             Capture capture = new Capture();
             var img = capture.QueryFrame().ToImage<Bgr, byte>();
             var bmp = img.Bitmap;
             picOutput.Image = bmp;
+
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            // string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age FROM Members";
-            // SqlDataAdapter da = new SqlDataAdapter(qry, conn);
-            // DataSet ds = new DataSet();
+            /* conn.Open();
+             // string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age FROM Members";
+             // SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+             // DataSet ds = new DataSet();
 
 
-            /* da.Fill(ds, "Members");
+              da.Fill(ds, "Members");
+              dgvMembers.DataSource = ds.Tables["Members"];
+
+
+
+
+
+             string qry = "SELECT * From Members";
+             SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+             DataSet ds = new DataSet();
+
+             da.Fill(ds, "Members");
              dgvMembers.DataSource = ds.Tables["Members"];
 
 
-     */
+
+             conn.Close();*/
 
 
-            string qry = "SELECT * From Members";
-            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
-            DataSet ds = new DataSet();
+            txtMemID.Text = null;
+            txtName.Text = null;
+            txtAge.Text = null;
+            txtAddress.Text = null;
+            txtCid.Text = null;
+            txtHeight.Text = null;
+            txtWeight.Text = null;
+            txtTp.Text = null;
+            txtNic.Text = null;
+            txtMail.Text = null;
+            picOutput.Image = null;
+    
 
-            da.Fill(ds, "Members");
-            dgvMembers.DataSource = ds.Tables["Members"];
 
-
-
-            conn.Close();
+           
         }
 
         private void member_Load(object sender, EventArgs e)

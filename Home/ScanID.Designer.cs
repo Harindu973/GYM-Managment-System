@@ -30,14 +30,15 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,6 +52,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1097, 591);
             this.dataGridView1.TabIndex = 29;
+            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             // 
             // panel4
             // 
@@ -62,6 +64,15 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(140, 93);
             this.panel4.TabIndex = 27;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(33, 11);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(66, 69);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 27;
+            this.pictureBox6.TabStop = false;
             // 
             // panel3
             // 
@@ -94,33 +105,41 @@
             this.panel2.Size = new System.Drawing.Size(1230, 10);
             this.panel2.TabIndex = 26;
             // 
-            // pictureBox6
+            // textBox1
             // 
-           // this.pictureBox6.Image = global::Home.Properties.Resources.;
-            this.pictureBox6.Location = new System.Drawing.Point(33, 11);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(66, 69);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 27;
-            this.pictureBox6.TabStop = false;
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.AcceptsTab = true;
+            this.textBox1.Location = new System.Drawing.Point(547, 120);
+            this.textBox1.MaxLength = 10;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(158, 22);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.AcceptsTabChanged += new System.EventHandler(this.textBox1_AcceptsTabChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // ScanID
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 847);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Name = "ScanID";
             this.Text = "ScanID";
+            this.Load += new System.EventHandler(this.ScanID_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ScanID_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +151,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
