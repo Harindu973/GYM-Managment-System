@@ -91,6 +91,174 @@ namespace Home
         private void ScanID_Load(object sender, EventArgs e)
         {
             textBox1.Focus();
+
+            conn.Open();
+
+
+
+            string timeqry = "SELECT * FROM TimeSchedule where Id = 1 ";
+            SqlCommand timecmd = new SqlCommand(timeqry, conn);
+            SqlDataReader readerA = timecmd.ExecuteReader();
+            readerA.Read();
+
+            
+            var LastTime = Convert.ToDateTime(readerA["Time"]);
+
+            readerA.Close();
+
+
+            if (DateTime.Today > LastTime)
+            {
+
+                //Code to Date collect
+
+
+
+
+
+                //Attendance table variables
+                int attno;
+                string EmpID;
+                string Attended;
+               
+
+
+                //MonthlyAtt table variables
+                int present;
+                int absent;
+
+
+                //Extra
+                int ExPresent = 0;
+                int ExAbsent = 0;
+
+
+                //Incremted Variables
+                int Inpresent;
+                int Inabsent;
+         
+
+             
+
+
+
+                for (attno = 0; attno < 100; attno++)
+                {
+
+                    string selqry = "SELECT * FROM Attendance where AttNO = '" + attno + "' ";
+                    SqlCommand selcmd = new SqlCommand(selqry, conn);
+                    SqlDataReader reader = selcmd.ExecuteReader();
+
+
+                    if (reader.Read())
+                    {
+
+                        //attendance table
+                        EmpID = reader["EMPID"].ToString();
+                        Attended = reader["Attended"].ToString();
+
+
+
+
+                        reader.Close();
+
+
+                        string seltoUpqry = "SELECT * FROM MonthlyAtt where EMPID = '" + EmpID + "' ";
+                        SqlCommand seltoUpcmd = new SqlCommand(seltoUpqry, conn);
+                        SqlDataReader ra = seltoUpcmd.ExecuteReader();
+
+
+                        ra.Read();
+                        //MonthlyAtt
+
+                        present = Convert.ToInt32(ra["PresentDays"]);
+                        absent = Convert.ToInt32(ra["AbsentDays"]);
+
+
+                        ra.Close();
+
+                        if (Attended == "Present   ")
+                        {
+                            ExPresent = 1;
+                            ExAbsent = 0;
+                        }
+                        else
+                        {
+                            ExPresent = 0;
+                            ExAbsent = 1;
+                        }
+
+                        Inpresent = present + ExPresent;
+                        Inabsent = absent + ExAbsent;
+
+
+                        string attLeaveqry = "UPDATE MonthlyAtt SET PresentDays = '" + Inpresent + "', AbsentDays = '" + Inabsent + "'  WHERE EMPID = '" + EmpID + "'";
+                        SqlCommand cmdLeave = new SqlCommand(attLeaveqry, conn);
+                        cmdLeave.ExecuteNonQuery();
+                        
+
+
+
+                    }
+
+                    reader.Close();
+
+
+
+
+
+                }
+
+                for (attno = 0; attno < 100; attno++)
+                {
+
+                    string attresetqry = "UPDATE Attendance SET Attended = 'Absent', Arrive = '', Leave = '', Mark = '0', Minutes = '0'  WHERE AttNO='" + attno + "'";
+                    SqlCommand cmdattreset = new SqlCommand(attresetqry, conn);
+                    cmdattreset.ExecuteNonQuery();
+
+
+                }
+
+
+                MessageBox.Show("Attendance Collected Sucssesfully and Ready to Next Day...!!!");
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                string Shedqry = "UPDATE TimeSchedule SET  Time = '" + DateTime.Today + "' where Id = '1'";
+                SqlCommand Shedcmd = new SqlCommand(Shedqry, conn);
+                Shedcmd.ExecuteNonQuery();
+
+                MessageBox.Show("Yesterday Collected Successfully ");
+
+
+
+
+            }
+
+
+
+
+            conn.Close();
+
+
+
+
+
         }
 
         private void ScanID_MouseDown(object sender, MouseEventArgs e)
