@@ -25,12 +25,12 @@ namespace Home
             conn.Open();
 
 
-            string qry = "SELECT EMPID,Name,Attended,Arrive,Leave,Minutes,Mark,CardID From Attendance";
+            string qry = "SELECT * From MonthlyAtt";
             SqlDataAdapter da = new SqlDataAdapter(qry, conn);
             DataSet ds = new DataSet();
 
-            da.Fill(ds, "Attendance");
-            dgvAttRec.DataSource = ds.Tables["Attendance"];
+            da.Fill(ds, "MonthlyAtt");
+            dgvAttRec.DataSource = ds.Tables["MonthlyAtt"];
 
 
 
