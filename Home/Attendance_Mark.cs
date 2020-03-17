@@ -57,5 +57,65 @@ namespace Home
 
 
         }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                        if (e.KeyChar == (char)Keys.Enter || e.KeyChar == 13)
+            {
+
+                button3_Click(sender, e);
+
+            }
+        }
+
+
+
+        public void DayStatement()
+        {
+
+
+       
+
+
+            string subject = DateTime.Now + " Attendance Sheet";
+            string mailBody = "This is " + DateTime.Now + " Calculated Statement of Last Day.";
+
+
+
+
+
+            //Resize DataGridView to full height.
+            int height = dgvMark.Height;
+            int width = dgvMark.Width;
+
+            dgvMark.Width = width + 100;
+            dgvMark.Height = (dgvMark.RowCount + 2) * dgvMark.RowTemplate.Height;
+            // dataGridView1.Width = (dataGridView1.ColumnCount+1) * dataGridView1.Columns.;
+
+            //Create a Bitmap and draw the DataGridView on it.
+            Bitmap bitmap = new Bitmap(this.dgvMark.Width, this.dgvMark.Height);
+            dgvMark.DrawToBitmap(bitmap, new Rectangle(0, 0, this.dgvMark.Width - 100, this.dgvMark.Height));
+
+            //Resize DataGridView back to original height.
+            dgvMark.Height = height;
+            dgvMark.Width = width;
+
+
+
+            string Date = DateTime.Today.ToString();
+          //  string path = "D:/Images/" + Date + " GridView.png";
+
+            //Save the Bitmap to folder.
+            bitmap.Save(@"D:\Gym Attendance Details\GridView.png");
+
+
+
+
+            Email em = new Email(subject, mailBody);
+
+
+
+        }
+
     }
 }

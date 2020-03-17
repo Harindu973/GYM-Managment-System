@@ -92,8 +92,30 @@ namespace Home
         {
             textBox1.Focus();
 
+
             conn.Open();
 
+
+            string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age,Weight,Height From MemDetails";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "MemDetails");
+            dataGridView1.DataSource = ds.Tables["MemDetails"];
+
+
+
+            conn.Close();
+
+
+
+
+
+
+
+
+            conn.Open();
+         
 
 
             string timeqry = "SELECT * FROM TimeSchedule where Id = 1 ";
@@ -112,6 +134,8 @@ namespace Home
 
                 //Code to Date collect
 
+                Attendance_Mark am = new Attendance_Mark();
+                am.DayStatement();
 
 
 
@@ -220,7 +244,7 @@ namespace Home
                 }
 
 
-                MessageBox.Show("Attendance Collected Sucssesfully and Ready to Next Day...!!!");
+                
 
 
                
@@ -243,7 +267,7 @@ namespace Home
                 SqlCommand Shedcmd = new SqlCommand(Shedqry, conn);
                 Shedcmd.ExecuteNonQuery();
 
-                MessageBox.Show("Yesterday Collected Successfully ");
+                MessageBox.Show("Yesterday Calculated Successfully...! \nCheck Your Email for Statement...");
 
 
 
@@ -269,6 +293,41 @@ namespace Home
         private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
         {
             textBox1.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string subject = "Attendance Sheet";
+            string mailBody = "This is "+DateTime.Today+" Attendace Sheet";
+
+
+
+
+          
+               //Resize DataGridView to full height.
+                int height = dataGridView1.Height;
+                int width = dataGridView1.Width;
+
+            dataGridView1.Width = width + 100;
+            dataGridView1.Height = (dataGridView1.RowCount+2) * dataGridView1.RowTemplate.Height;
+               // dataGridView1.Width = (dataGridView1.ColumnCount+1) * dataGridView1.Columns.;
+
+            //Create a Bitmap and draw the DataGridView on it.
+            Bitmap bitmap = new Bitmap(this.dataGridView1.Width, this.dataGridView1.Height);
+                dataGridView1.DrawToBitmap(bitmap, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+
+                //Resize DataGridView back to original height.
+                dataGridView1.Height = height;
+                dataGridView1.Width = width;
+
+                //Save the Bitmap to folder.
+                bitmap.Save(@"D:\Images\DataGridView.png");
+
+
+            Email em = new Email(subject,mailBody);
+
+
+
         }
     }
 }
