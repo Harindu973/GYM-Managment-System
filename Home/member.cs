@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Emgu.CV;
 using Emgu.CV.Structure;
+using System.IO;
 
 namespace Home
 {
@@ -29,6 +30,51 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
+
+            picOutput.Image.Save(@"D:\Images\xx.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            //string imgLocation = "D:/Images/xx.jpeg";
+
+            string imgLocation = "";
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "All files(*.*)|*.*|jpg files(*.jpg)|*.jpg|png files(*.png)|*.png";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                picOutput.ImageLocation = imgLocation;
+            }
+
+
+            byte[] images = null;
+              FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+              BinaryReader brs = new BinaryReader(Streem);
+              images = brs.ReadBytes((int)Streem.Length);
+
+            */
+
+
+
+
+
+            
+
+            Image myImage = picOutput.Image;
+            byte[] data;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                myImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                data = ms.ToArray();
+
+                //picOutput.Image.Save(@"D:\Images\xx.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
+            }
+
+            
+
+
+
+
+
 
 
             string MemID = txtMemID.Text;
@@ -43,12 +89,15 @@ namespace Home
             string Cid = txtCid.Text;
             string Email = txtMail.Text;
             string Gender;
-            capture.Dispose();
+            
 
 
 
 
-            if (MemID == string.Empty || Fname == string.Empty || Nic == string.Empty || Pack == string.Empty || Phone == string.Empty || Add == string.Empty || Age == string.Empty || Weight == string.Empty || Height == string.Empty || Email == string.Empty || Cid == string.Empty)
+
+
+
+            if (MemID == string.Empty && Fname == string.Empty && Nic == string.Empty && Pack == string.Empty && Phone == string.Empty && Add == string.Empty && Age == string.Empty && Weight == string.Empty && Height == string.Empty && Email == string.Empty && Cid == string.Empty)
             {
                 MessageBox.Show("Some fileds are empty !!");
             }
@@ -67,9 +116,9 @@ namespace Home
 
                 conn.Open();
        
-                string query = "INSERT INTO Members values('" + MemID + "','" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',' ','" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
+                string query = "INSERT INTO MemDetails values('" + MemID + "','" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',@image,'" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
                 SqlCommand cmd = new SqlCommand(query, conn);
-               // cmd.Parameters.Add(new SqlParameter("@images", images));
+                cmd.Parameters.Add(new SqlParameter("@image", data));
 
 
     
@@ -106,7 +155,7 @@ namespace Home
                 try
                 {
                     conn.Open();
-                    string selqry = "SELECT * FROM Members where CardID = '" + Cid + "' ";
+                    string selqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
                     SqlCommand selcmd = new SqlCommand(selqry, conn);
                     SqlDataReader reader = selcmd.ExecuteReader();
                     reader.Read();
@@ -144,7 +193,7 @@ namespace Home
                 try
                 {
                     conn.Open();
-                    string selqry = "SELECT * FROM Members where CardID = '" + Cid + "' ";
+                    string selqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
                     SqlCommand selcmd = new SqlCommand(selqry, conn);
                     SqlDataReader reader = selcmd.ExecuteReader();
                     reader.Read();
@@ -196,7 +245,7 @@ namespace Home
                 try
                 {
                     conn.Open();
-                    string selqry = "SELECT * FROM Members where NIC = '" + Nic + "' ";
+                    string selqry = "SELECT * FROM MemDetails where NIC = '" + Nic + "' ";
                     SqlCommand selcmd = new SqlCommand(selqry, conn);
                     SqlDataReader reader = selcmd.ExecuteReader();
                     reader.Read();
@@ -259,7 +308,7 @@ namespace Home
 
 
 
-        Capture capture = new Capture();
+        
         private void btnCapture_Click(object sender, EventArgs e)
         {
             Capture capture = new Capture();
@@ -319,12 +368,12 @@ namespace Home
             conn.Open();
 
 
-            string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age,Weight,Height From Members";
+            string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age,Weight,Height From MemDetails";
             SqlDataAdapter da = new SqlDataAdapter(qry, conn);
             DataSet ds = new DataSet();
 
-            da.Fill(ds, "Members");
-            dgvMembers.DataSource = ds.Tables["Members"];
+            da.Fill(ds, "MemDetails");
+            dgvMembers.DataSource = ds.Tables["MemDetails"];
 
 
 

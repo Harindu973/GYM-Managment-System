@@ -16,5 +16,15 @@ namespace Home
         {
             InitializeComponent();
         }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Selling_Recods_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

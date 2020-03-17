@@ -161,6 +161,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(285, 34);
             this.textBox8.TabIndex = 104;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // label11
             // 
@@ -254,6 +255,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "SMS";
             this.Size = new System.Drawing.Size(1102, 958);
+            this.Load += new System.EventHandler(this.SMS_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

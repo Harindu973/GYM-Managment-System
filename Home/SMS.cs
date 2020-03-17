@@ -35,7 +35,7 @@ namespace Home
             conn.Open();
 
 
-            string qry = "SELECT * From Members where CardID = '" + textBox8.Text + "' OR EMP_ID = '" + textBox8.Text + "'";
+            string qry = "SELECT * From MemDetails where CardID = '" + textBox8.Text + "' OR EMP_ID = '" + textBox8.Text + "'";
             SqlCommand selcmd = new SqlCommand(qry, conn);
             SqlDataReader reader = selcmd.ExecuteReader();
             reader.Read();
@@ -46,6 +46,21 @@ namespace Home
             reader.Close();
 
             conn.Close();
+        }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == 13)
+            {
+
+                button6_Click(sender, e);
+
+            }
+        }
+
+        private void SMS_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

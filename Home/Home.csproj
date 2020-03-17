@@ -87,6 +87,7 @@
     <Compile Include="dasboard.Designer.cs">
       <DependentUpon>dasboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Email.cs" />
     <Compile Include="Encap.cs" />
     <Compile Include="FeesRecodscs.cs">
       <SubType>UserControl</SubType>

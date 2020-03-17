@@ -80,6 +80,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(339, 30);
             this.textBox8.TabIndex = 129;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // label11
             // 
@@ -110,11 +111,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvMark;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.DataGridView dgvMark;
     }
 }

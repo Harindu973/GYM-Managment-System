@@ -53,5 +53,15 @@ namespace Home
 
             conn.Close();
         }
+
+        private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == 13)
+            {
+
+                button3_Click(sender, e);
+
+            }
+        }
     }
 }
