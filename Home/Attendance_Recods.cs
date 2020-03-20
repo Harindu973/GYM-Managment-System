@@ -63,5 +63,10 @@ namespace Home
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Attendance_Recods_Load(sender, e);
+        }
     }
 }

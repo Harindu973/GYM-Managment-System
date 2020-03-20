@@ -97,8 +97,63 @@ namespace Home
 
             conn.Close();
 
+            insertAmount();
+
+
+            if (checkBox1.Checked == true)
+            {
+                admitionFee();
+            }
+
 
         }
+
+
+        public void admitionFee()
+        {
+
+            string payqry = "UPDATE PaymentFee SET  Reg-Fee = 'Paid' where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+            SqlCommand cmdsl = new SqlCommand(payqry, conn);
+            cmdsl.ExecuteNonQuery();
+
+
+        }
+
+
+
+        public void insertAmount()
+        {
+
+            conn.Open();
+
+            decimal fee = decimal.Parse(textBox1.Text);
+
+            string payqry = "UPDATE PaymentFee SET  " + ValueOfCombo + " = " + fee + " where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+            SqlCommand cmdsl = new SqlCommand(payqry, conn);
+            cmdsl.ExecuteNonQuery();
+
+           
+
+
+
+
+
+            //Showing Updated Result after refresh
+            string qry = "SELECT * From PaymentFee where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "PaymentFee");
+            dataGridView1.DataSource = ds.Tables["PaymentFee"];
+
+            conn.Close();
+
+
+
+        }
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -118,6 +173,26 @@ namespace Home
 
             conn.Close();
 
+
+
+
+            conn.Open();
+
+
+            string qry2 = "SELECT * From PaymentFee";
+            SqlDataAdapter da2 = new SqlDataAdapter(qry2, conn);
+            DataSet ds2 = new DataSet();
+
+            da2.Fill(ds2, "PaymentFee");
+            dataGridView1.DataSource = ds2.Tables["PaymentFee"];
+
+            textBox8.Text = null;
+            textBox1.Text = null;
+            checkBox1.Checked = false;
+
+
+            conn.Close();
+
         }
 
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
@@ -130,5 +205,9 @@ namespace Home
             }
         }
 
-     }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            payment_Load(sender, e);
+        }
+    }
 }

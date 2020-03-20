@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staff1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -56,6 +57,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -65,10 +71,10 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(658, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(668, 189);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(34, 764);
+            this.dataGridView1.Size = new System.Drawing.Size(34, 608);
             this.dataGridView1.TabIndex = 125;
             // 
             // label9
@@ -352,10 +358,73 @@
             this.pictureBox2.TabIndex = 124;
             this.pictureBox2.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Firebrick;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(955, 82);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(55, 51);
+            this.button4.TabIndex = 132;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Firebrick;
+            this.panel13.Location = new System.Drawing.Point(642, 136);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(292, 3);
+            this.panel13.TabIndex = 131;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.Color.Firebrick;
+            this.textBox8.Location = new System.Drawing.Point(642, 96);
+            this.textBox8.MaxLength = 10;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(285, 30);
+            this.textBox8.TabIndex = 130;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(637, 65);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 28);
+            this.label11.TabIndex = 129;
+            this.label11.Text = "Member ID";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Firebrick;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.Control;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(1016, 82);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(55, 51);
+            this.button5.TabIndex = 133;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // staff1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -422,5 +491,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -109,7 +109,7 @@ namespace Home
                 }
                 else
                 {
-                    Gender = "Female";
+                    Gender = "Female"; 
                 }
 
 
@@ -172,7 +172,7 @@ namespace Home
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Something's Going wrong in Attendance sheet reg...!  Plz Contact a Developer..." + ex);
+                    MessageBox.Show("Something's Going wrong in Attendance sheet reg...!  Plz Contact a Developer...");
                 }
                 catch (Exception x)
                 {
@@ -211,11 +211,11 @@ namespace Home
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer..." + ex);
+                    MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer...");
                 }
                 catch (Exception x)
                 {
-                    MessageBox.Show("" + x);
+                    MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer..." + x);
                 }
                 finally
                 {
@@ -225,10 +225,40 @@ namespace Home
 
 
 
+                //feeAmont
 
 
+                try
+                {
+                    conn.Open();
+                    string selqry2 = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
+                    SqlCommand selcmd2 = new SqlCommand(selqry2, conn);
+                    SqlDataReader reader2 = selcmd2.ExecuteReader();
+                    reader2.Read();
 
+                    string EMPID = reader2["EMP_ID"].ToString();
+                    reader2.Close();
 
+                    string attquery2 = "INSERT INTO PaymentFee (EMPID,CardID,Name) values('" + EMPID + "','" + Cid + "','" + Fname + "')";
+
+                    SqlCommand attcmd2 = new SqlCommand(attquery2, conn);
+
+                    attcmd2.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("Something's Going wrong in Payment Fee reg...!  Plz Contact a Developer...");
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Something's Going wrong in Payment Fee reg...!  Plz Contact a Developer..." + x);
+                }
+                finally
+                {
+                    conn.Close();
+                }
 
 
 
@@ -272,6 +302,7 @@ namespace Home
 
                     txtName.Text = "";
                     txtNic.Text = "";
+                    txtMemID.Text = "";
 
                     txtAge.Text = "";
                     txtTp.Text = "";
@@ -321,6 +352,9 @@ namespace Home
 
         private void button2_Click(object sender, EventArgs e)
         {
+            member_Load(sender, e);
+
+
             /* conn.Open();
              // string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age FROM Members";
              // SqlDataAdapter da = new SqlDataAdapter(qry, conn);
