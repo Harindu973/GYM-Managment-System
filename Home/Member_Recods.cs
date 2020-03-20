@@ -93,12 +93,63 @@ namespace Home
             {
 
                 button3_Click(sender, e);
+                Member_Recods_Load(sender, e);
 
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
+            conn.Open();
+            
+
+
+
+
+
+            try
+            {
+                string mainquery = "Delete from Attendance where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+                string attquery = "Delete from MemDetails where CardID = '" + textBox8.Text + "' OR EMP_ID = '" + textBox8.Text + "'";
+                string monthquery = "Delete from MonthlyAtt where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+                string salquery = "Delete from Payments where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+
+                SqlCommand maincmd = new SqlCommand(mainquery, conn);
+                maincmd.ExecuteNonQuery();
+
+                SqlCommand attcmd = new SqlCommand(attquery, conn);
+                attcmd.ExecuteNonQuery();
+
+                SqlCommand monthcmd = new SqlCommand(monthquery, conn);
+                monthcmd.ExecuteNonQuery();
+
+                SqlCommand salcmd = new SqlCommand(salquery, conn);
+                salcmd.ExecuteNonQuery();
+
+
+
+                MessageBox.Show(textBox8.Text + " is Deleted Successfully");
+
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Something's Going wrong...!  Plz Contact a Developer..." + ex);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
+            Member_Recods_Load(sender, e);
+
+
+
+
+
+
 
 
         }

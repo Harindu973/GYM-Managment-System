@@ -117,5 +117,9 @@ namespace Home
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Attendance_Mark_Load(sender, e);
+        }
     }
 }

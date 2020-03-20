@@ -206,5 +206,12 @@ namespace Home
             label9.BringToFront();
 
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            ScanID a1 = new ScanID();
+            a1.Show();
+            
+        }
     }
 }

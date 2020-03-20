@@ -18,8 +18,9 @@ namespace Home
                  MailMessage mail = new MailMessage();
                  SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                 mail.From = new MailAddress("harindulakshankob@gmail.com");
-                 mail.To.Add("madhushika1213@gmail.com");
+                 mail.From = new MailAddress("focusoevuredev@gmail.com");
+                 mail.To.Add("harindulakshankob@gmail.com");
+                
 
                  mail.Subject = subject;
 
@@ -28,12 +29,12 @@ namespace Home
                  mail.Attachments.Add(new Attachment("D:/Images/DataGridView.png"));
 
                 SmtpServer.Port = 587;
-                 SmtpServer.Credentials = new System.Net.NetworkCredential("harindulakshankob@gmail.com", "Password");
+                 SmtpServer.Credentials = new System.Net.NetworkCredential("focusoevuredev@gmail.com", "tfo12345!");
                  SmtpServer.EnableSsl = true;
 
                  SmtpServer.Send(mail);
 
-
+                
              }
              catch (Exception)
              {

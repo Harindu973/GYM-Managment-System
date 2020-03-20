@@ -38,6 +38,22 @@ namespace Home
             conn.Close();
 
 
+            conn.Open();
+
+
+            string qry2 = "SELECT * From PaymentFee";
+            SqlDataAdapter da2 = new SqlDataAdapter(qry2, conn);
+            DataSet ds2 = new DataSet();
+
+            da2.Fill(ds2, "PaymentFee");
+            dataGridView1.DataSource = ds2.Tables["PaymentFee"];
+
+
+
+            conn.Close();
+
+
+
 
 
         }
@@ -73,6 +89,22 @@ namespace Home
 
             conn.Close();
 
+            conn.Open();
+
+
+            string qry2 = "SELECT * From PaymentFee  where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "' ";
+            SqlDataAdapter da2 = new SqlDataAdapter(qry2, conn);
+            DataSet ds2 = new DataSet();
+
+            da2.Fill(ds2, "PaymentFee");
+            dataGridView1.DataSource = ds2.Tables["PaymentFee"];
+
+
+
+            conn.Close();
+
+
+
         }
 
         private void textBox8_KeyPress(object sender, KeyPressEventArgs e)
@@ -83,6 +115,11 @@ namespace Home
                 button3_Click(sender, e);
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FeesRecodscs_Load(sender, e);
         }
     }
 }
