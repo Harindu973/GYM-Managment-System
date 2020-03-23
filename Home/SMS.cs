@@ -62,5 +62,10 @@ namespace Home
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           textBox1.Text = button1.Text;
+        }
     }
 }

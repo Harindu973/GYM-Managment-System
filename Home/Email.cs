@@ -10,7 +10,7 @@ namespace Home
 {
     class Email
     {
-        public Email(string subject,string MBody)
+        public Email(string subject,string MBody,string iPath)
         {
              try
              {
@@ -26,7 +26,7 @@ namespace Home
 
 
                  mail.Body = MBody;
-                 mail.Attachments.Add(new Attachment("D:/Images/DataGridView.png"));
+                 mail.Attachments.Add(new Attachment(iPath));
 
                 SmtpServer.Port = 587;
                  SmtpServer.Credentials = new System.Net.NetworkCredential("focusoevuredev@gmail.com", "tfo12345!");
