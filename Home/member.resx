@@ -117,28 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAABAZJREFUaEPt
-        mltLVFEUxy0ru9BTRhRFFBUUlZEWXSVJyvoCEUSYT2H3/AgWPRhkn6MeoqImKFB6MgqfjOgCpRWWFDo6
-        jql1+i1Ze1iOjp4Zz5kLzB/+HGevvf5rrX32Pmefcywpoogisg/P8xYODnrbhoa8WsdYzKvs7/c2ik27
-        5R9Ibh6J18BW+AaOQi8Fh2E7vElxe1Qit+jr85Yz2ldJ6oMmmQm70GhiMJaq7CRgq6NPm7JVm4OBnIFo
-        1GtA+BecLjnhOPwCPyl/QDkb0/UV9pD0WbTna5gJEKfe9GnT5rmD6bAawWdG3HGcRB5zbOS4k4QWqUsC
-        tJXiX4X9Ov1ewn/qaxkh+XJ1CaeQgQFvH2IysjZwDN4ZHvbWajffQG8zvndh8prqxrZX+gReCKN4FA4Z
-        UY/fD+Nxb712yRgkuwW9iNWGUdoPBFqICCYVEaetQc2BQNYdMa6hPWLiRDkzzeZ35oUwp9cg8NOIReER
-        NQcOiqlFP3FRYMB+u79hZoXIKOH8wgjFYY2aQwPFHCfOHxPXMbNCGI1zVkh+qyl0UIzcn2wRwvQL6e31
-        luFor1D31BQYSLaOwalPQRnEThNfLi7t6uofSSMS4/K6Tk2BAV25WycS9cFOdfUHXRtyN54QYHRuqylQ
-        oJ1uIelNLRI/ZJzH5cqlpkCBtmwy3T7KD9Pba1FIC06ukIg2Fx5I/rUp5II2FxZYH/JQZPc+29VUWGBa
-        yb7HFTFGYVN2sQUBkq82hXRrc+GBK9RJU0iXNhce8rUQcnnr8iLHE9qcGqyRw84B5s3UIpdvLi9yPKjN
-        qcH+f5NzgLLYy9SUM5DDYnL56/KS10pqSg2cFtA5sYVmz1WhppyBqbTb5QNHyLFUTTODzvaGeEmbcwYG
-        U54c3cB2aPPsyLctCjkkHu4o5JY2zw4Kycqm0Q/k7Qw5JNYHue1X0+xgDso2/qNxblFT1kF82SG7QX0v
-        uanJHziFV4xAKA9Ws4Gr0wZiy3sCl0f6G9hpHnXvqylrIOYDE/87Z2OJmtIDU2rSywfYqKbQkTQjZJGf
-        UVP60LXy3AiOInhMzaFBtiDEGjNxI2mvjWSQ+CqEEtsDGA2zGC1i0MTrgSvVPDfonVXeMDpxefC6rOZA
-        ICPOADWha8/EAG3B7iwQlS9SthiZt4+CeIkteyfW4xOrDfthtXYJFiS+C3E51TZgxp8V9GYnnxXsJVbu
-        W5+JtUO7hQOClMOnNrDSz4eeMmwV9LmoGvJVa5KOaGBboS7hQufzaQJ/TU7EMPnTm/w9JXFDOdOnNER2
-        ISNM8Eb4TpPJhPLkd160VDa34MpWRUI3mBavOM70eVruRR0cm/GpVPf8BKM75R8GhLRtFZt2K6KIIrKG
-        kpL/uk3B9uWyDJIAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

@@ -30,40 +30,40 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(staff1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtNic = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtTp = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Rfemale = new System.Windows.Forms.RadioButton();
+            this.Rmale = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCid = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -74,30 +74,20 @@
             this.dataGridView1.Location = new System.Drawing.Point(668, 189);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(34, 608);
+            this.dataGridView1.Size = new System.Drawing.Size(103, 608);
             this.dataGridView1.TabIndex = 125;
             // 
-            // label9
+            // txtNic
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(453, 300);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 28);
-            this.label9.TabIndex = 123;
-            this.label9.Text = "Member Photo";
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.Black;
-            this.textBox10.Location = new System.Drawing.Point(146, 145);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(237, 37);
-            this.textBox10.TabIndex = 121;
+            this.txtNic.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNic.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNic.ForeColor = System.Drawing.Color.Black;
+            this.txtNic.Location = new System.Drawing.Point(146, 145);
+            this.txtNic.Multiline = true;
+            this.txtNic.Name = "txtNic";
+            this.txtNic.Size = new System.Drawing.Size(237, 37);
+            this.txtNic.TabIndex = 121;
             // 
             // panel4
             // 
@@ -107,17 +97,17 @@
             this.panel4.Size = new System.Drawing.Size(342, 3);
             this.panel4.TabIndex = 97;
             // 
-            // textBox9
+            // txtTp
             // 
-            this.textBox9.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.Black;
-            this.textBox9.Location = new System.Drawing.Point(192, 523);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(197, 37);
-            this.textBox9.TabIndex = 120;
+            this.txtTp.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTp.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTp.ForeColor = System.Drawing.Color.Black;
+            this.txtTp.Location = new System.Drawing.Point(192, 523);
+            this.txtTp.Multiline = true;
+            this.txtTp.Name = "txtTp";
+            this.txtTp.Size = new System.Drawing.Size(197, 37);
+            this.txtTp.TabIndex = 120;
             // 
             // panel10
             // 
@@ -127,17 +117,17 @@
             this.panel10.Size = new System.Drawing.Size(342, 3);
             this.panel10.TabIndex = 113;
             // 
-            // textBox5
+            // txtMail
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(107, 604);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(282, 37);
-            this.textBox5.TabIndex = 112;
+            this.txtMail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMail.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMail.ForeColor = System.Drawing.Color.Black;
+            this.txtMail.Location = new System.Drawing.Point(107, 604);
+            this.txtMail.Multiline = true;
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(282, 37);
+            this.txtMail.TabIndex = 112;
             // 
             // panel9
             // 
@@ -175,17 +165,17 @@
             this.label7.TabIndex = 107;
             this.label7.Text = "Phone Number";
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(45, 399);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(338, 78);
-            this.textBox2.TabIndex = 104;
+            this.txtAddress.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddress.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.Location = new System.Drawing.Point(45, 399);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(338, 78);
+            this.txtAddress.TabIndex = 104;
             // 
             // panel7
             // 
@@ -205,27 +195,28 @@
             this.label6.TabIndex = 101;
             this.label6.Text = "Address";
             // 
-            // radioButton2
+            // Rfemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(308, 300);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 21);
-            this.radioButton2.TabIndex = 108;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Rfemale.AutoSize = true;
+            this.Rfemale.Location = new System.Drawing.Point(308, 300);
+            this.Rfemale.Name = "Rfemale";
+            this.Rfemale.Size = new System.Drawing.Size(75, 21);
+            this.Rfemale.TabIndex = 108;
+            this.Rfemale.TabStop = true;
+            this.Rfemale.Text = "Female";
+            this.Rfemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // Rmale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(150, 300);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 21);
-            this.radioButton1.TabIndex = 105;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Rmale.AutoSize = true;
+            this.Rmale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Rmale.Location = new System.Drawing.Point(150, 300);
+            this.Rmale.Name = "Rmale";
+            this.Rmale.Size = new System.Drawing.Size(59, 21);
+            this.Rmale.TabIndex = 105;
+            this.Rmale.TabStop = true;
+            this.Rmale.Text = "Male";
+            this.Rmale.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -245,17 +236,17 @@
             this.panel6.Size = new System.Drawing.Size(342, 3);
             this.panel6.TabIndex = 100;
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(150, 226);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 37);
-            this.textBox3.TabIndex = 99;
+            this.txtAge.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAge.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.ForeColor = System.Drawing.Color.Black;
+            this.txtAge.Location = new System.Drawing.Point(150, 226);
+            this.txtAge.Multiline = true;
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(237, 37);
+            this.txtAge.TabIndex = 99;
             // 
             // label4
             // 
@@ -285,17 +276,17 @@
             this.label3.TabIndex = 95;
             this.label3.Text = "NIC No\r\n";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(146, 67);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 37);
-            this.textBox1.TabIndex = 94;
+            this.txtName.BackColor = System.Drawing.SystemColors.Control;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(146, 67);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(237, 37);
+            this.txtName.TabIndex = 94;
             // 
             // label2
             // 
@@ -306,20 +297,6 @@
             this.label2.Size = new System.Drawing.Size(100, 28);
             this.label2.TabIndex = 93;
             this.label2.Text = "Full Name";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(28, 779);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(165, 52);
-            this.button3.TabIndex = 128;
-            this.button3.Text = "Take a Photo";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -348,15 +325,7 @@
             this.button1.TabIndex = 126;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(432, 67);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(165, 202);
-            this.pictureBox2.TabIndex = 124;
-            this.pictureBox2.TabStop = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button4
             // 
@@ -371,6 +340,7 @@
             this.button4.Size = new System.Drawing.Size(55, 51);
             this.button4.TabIndex = 132;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_2);
             // 
             // panel13
             // 
@@ -391,6 +361,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(285, 30);
             this.textBox8.TabIndex = 130;
+            this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress);
             // 
             // label11
             // 
@@ -415,48 +386,96 @@
             this.button5.Size = new System.Drawing.Size(55, 51);
             this.button5.TabIndex = 133;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Location = new System.Drawing.Point(47, 724);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 3);
+            this.panel1.TabIndex = 136;
+            // 
+            // txtCid
+            // 
+            this.txtCid.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCid.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCid.ForeColor = System.Drawing.Color.Black;
+            this.txtCid.Location = new System.Drawing.Point(125, 681);
+            this.txtCid.Multiline = true;
+            this.txtCid.Name = "txtCid";
+            this.txtCid.Size = new System.Drawing.Size(264, 37);
+            this.txtCid.TabIndex = 135;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(42, 681);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 28);
+            this.label1.TabIndex = 134;
+            this.label1.Text = "Card ID";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Firebrick;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(1077, 82);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(20);
+            this.button3.Size = new System.Drawing.Size(67, 51);
+            this.button3.TabIndex = 137;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // staff1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtCid);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtNic);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtTp);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtMail);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.Rfemale);
+            this.Controls.Add(this.Rmale);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Name = "staff1";
-            this.Size = new System.Drawing.Size(1102, 958);
+            this.Size = new System.Drawing.Size(1171, 958);
+            this.Load += new System.EventHandler(this.staff1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,31 +483,28 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtNic;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtTp;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton Rfemale;
+        private System.Windows.Forms.RadioButton Rmale;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
@@ -496,5 +512,9 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCid;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button3;
     }
 }

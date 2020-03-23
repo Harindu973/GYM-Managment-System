@@ -44,6 +44,20 @@ namespace Home
             conn.Close();
 
 
+            conn.Open();
+
+
+            string qry2 = "SELECT * From PaymentFee";
+            SqlDataAdapter da2 = new SqlDataAdapter(qry2, conn);
+            DataSet ds2 = new DataSet();
+
+            da2.Fill(ds2, "PaymentFee");
+            dataGridView1.DataSource = ds2.Tables["PaymentFee"];
+
+
+
+            conn.Close();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -58,6 +72,22 @@ namespace Home
 
             da.Fill(ds, "Payments");
             dgvFees.DataSource = ds.Tables["Payments"];
+
+
+
+            conn.Close();
+
+
+
+            conn.Open();
+
+
+            string qry2 = "SELECT * From PaymentFee where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+            SqlDataAdapter da2 = new SqlDataAdapter(qry2, conn);
+            DataSet ds2 = new DataSet();
+
+            da2.Fill(ds2, "PaymentFee");
+            dataGridView1.DataSource = ds2.Tables["PaymentFee"];
 
 
 
@@ -81,7 +111,7 @@ namespace Home
             SqlCommand cmdsl = new SqlCommand(payqry, conn);
             cmdsl.ExecuteNonQuery();
 
-            MessageBox.Show("Your Payment of "+ValueOfCombo+" Recorded Succesfully...!!! ");
+            
 
 
 
@@ -111,11 +141,13 @@ namespace Home
 
         public void admitionFee()
         {
-
-            string payqry = "UPDATE PaymentFee SET  Reg-Fee = 'Paid' where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+            conn.Open();
+            string payqry = "UPDATE PaymentFee SET  RegFee = 'Paid' where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
             SqlCommand cmdsl = new SqlCommand(payqry, conn);
             cmdsl.ExecuteNonQuery();
+            conn.Close();
 
+            MessageBox.Show("Your Payment of " + ValueOfCombo + " Recorded Succesfully...!!! ");
 
         }
 
@@ -126,8 +158,7 @@ namespace Home
 
             conn.Open();
 
-            decimal fee = decimal.Parse(textBox1.Text);
-
+            decimal fee =  Convert.ToDecimal(textBox1.Text);
             string payqry = "UPDATE PaymentFee SET  " + ValueOfCombo + " = " + fee + " where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
             SqlCommand cmdsl = new SqlCommand(payqry, conn);
             cmdsl.ExecuteNonQuery();

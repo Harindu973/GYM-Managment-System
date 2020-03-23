@@ -93,7 +93,7 @@ namespace Home
         private void ScanID_Load(object sender, EventArgs e)
         {
 
-
+            dataGridView2.Visible = false;
 
 
            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -107,20 +107,69 @@ namespace Home
 
 
 
+            int currentMonth = Convert.ToInt32(DateTime.Now.Month);
+            int currentYear = Convert.ToInt32(DateTime.Now.Year);
+
 
             conn.Open();
-         
-
 
             string timeqry = "SELECT * FROM TimeSchedule where Id = 1 ";
             SqlCommand timecmd = new SqlCommand(timeqry, conn);
             SqlDataReader readerA = timecmd.ExecuteReader();
             readerA.Read();
 
-            
+
             var LastTime = Convert.ToDateTime(readerA["Time"]);
+            int lastMonth = Convert.ToInt32(readerA["Month"]);
+            int lastYear = Convert.ToInt32(readerA["Year"]);
 
             readerA.Close();
+
+
+
+
+            conn.Close();
+
+
+            if (lastYear < currentYear)
+            {
+                conn.Open();
+                
+                string Yearqry = "UPDATE TimeSchedule SET  Year = " + currentYear + " where Id = '1'";
+                SqlCommand Yeahcmd = new SqlCommand(Yearqry, conn);
+                Yeahcmd.ExecuteNonQuery();
+          
+
+                conn.Close();
+
+                monthReset(currentMonth);
+                MessageBox.Show("Happy New Year...!!! Best Wishes From Forcus Oeuvre...!!!");
+                YearDateStatement();
+                YearStatement();
+
+            }
+            else if(lastMonth < currentMonth)
+            {
+
+                monthReset(currentMonth);
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+            conn.Open();
+         
+
+
+
 
 
             if (DateTime.Today > LastTime)
@@ -134,7 +183,7 @@ namespace Home
 
                 string subject = "Attendance Sheet";
                 string mailBody = "This is    " + DateTime.Now + " Attendace Sheet";
-
+                
 
 
 
@@ -148,18 +197,23 @@ namespace Home
                 // dataGridView1.Width = (dataGridView1.ColumnCount+1) * dataGridView1.Columns.;
 
                 //Create a Bitmap and draw the DataGridView on it.
-                Bitmap bitmap = new Bitmap(this.dataGridView1.Width-600, this.dataGridView1.Height);
-                dataGridView1.DrawToBitmap(bitmap, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
+                Bitmap bitmap1 = new Bitmap(this.dataGridView1.Width-600, this.dataGridView1.Height);
+                dataGridView1.DrawToBitmap(bitmap1, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
 
                 //Resize DataGridView back to original height.
                 dataGridView1.Height = height;
                 dataGridView1.Width = width;
 
                 //Save the Bitmap to folder.
-                bitmap.Save(@"D:\Images\DataGridView.png");
+
+                const string i1Path = @"C:\ProgramData\GymManagementSoftware\DayStatement.png";
+                bitmap1.Save(i1Path);
+                
+                
 
 
-                Email em = new Email(subject, mailBody);
+
+                Email em = new Email(subject, mailBody,i1Path);
 
 
 
@@ -314,8 +368,40 @@ namespace Home
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string subject = "Attendance Sheet of " + DateTime.Now;
-            string mailBody = "This is " + DateTime.Now + " Attendace Sheet";
+
+        }
+
+
+
+
+        public void monthReset(int cMonth)
+        {
+            conn.Open();
+
+            string Monthqry = "UPDATE TimeSchedule SET  Month = " + cMonth + " where Id = '1'";
+            SqlCommand Monthcmd = new SqlCommand(Monthqry, conn);
+            Monthcmd.ExecuteNonQuery();
+            conn.Close();
+
+            MonthStatement();
+            MessageBox.Show("Last Month Collected... Check Your Email for the statement...");
+        }
+
+
+        public void MonthStatement()
+        {
+            conn.Open();
+
+            string qry = "SELECT * From MonthlyAtt";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "MonthlyAtt");
+            dataGridView1.DataSource = ds.Tables["MonthlyAtt"];
+
+
+            string subject = "Monthly Statement of  " + DateTime.Now;
+            string mailBody = "This is " + DateTime.Now + " Monthly Statement";
 
 
 
@@ -330,7 +416,7 @@ namespace Home
             // dataGridView1.Width = (dataGridView1.ColumnCount+1) * dataGridView1.Columns.;
 
             //Create a Bitmap and draw the DataGridView on it.
-            Bitmap bitmap = new Bitmap(this.dataGridView1.Width-600, this.dataGridView1.Height);
+            Bitmap bitmap = new Bitmap(this.dataGridView1.Width - 900, this.dataGridView1.Height);
             dataGridView1.DrawToBitmap(bitmap, new Rectangle(0, 0, this.dataGridView1.Width, this.dataGridView1.Height));
 
             //Resize DataGridView back to original height.
@@ -338,12 +424,124 @@ namespace Home
             dataGridView1.Width = width;
 
             //Save the Bitmap to folder.
-            bitmap.Save(@"D:\Images\DataGridView.png");
+            const string i2Path = @"C:\ProgramData\GymManagementSoftware\MonthlyStatement.png";
+            bitmap.Save(i2Path);
 
 
-            Email em = new Email(subject, mailBody);
+            Email em = new Email(subject, mailBody,i2Path);
 
 
+            ShowGridView();
+            conn.Close();
+
+            
+
+        }
+
+
+
+
+        public void YearStatement()
+        {
+            conn.Open();
+            dataGridView2.Visible = true;
+            string qry = "SELECT * From PaymentFee";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "PaymentFee");
+            dataGridView2.DataSource = ds.Tables["PaymentFee"];
+
+
+            string subject = "Year Payment Fees Statement of  " + DateTime.Now;
+            string mailBody = "This is " + DateTime.Now + " Year Statement";
+
+
+
+
+
+            //Resize DataGridView to full height.
+            int height = dataGridView2.Height;
+            int width = dataGridView2.Width;
+
+            dataGridView2.Width = width + 100;
+            dataGridView2.Height = (dataGridView2.RowCount + 2) * dataGridView2.RowTemplate.Height;
+            // dataGridView1.Width = (dataGridView1.ColumnCount+1) * dataGridView1.Columns.;
+
+            //Create a Bitmap and draw the DataGridView on it.
+            Bitmap bitmap = new Bitmap(this.dataGridView2.Width-250, this.dataGridView2.Height);
+            dataGridView2.DrawToBitmap(bitmap, new Rectangle(0, 0, this.dataGridView2.Width, this.dataGridView2.Height));
+
+            //Resize DataGridView back to original height.
+            dataGridView2.Height = height;
+            dataGridView2.Width = width;
+
+            //Save the Bitmap to folder.
+            const string i3Path = @"C:\ProgramData\GymManagementSoftware\YearStatement.png";
+            bitmap.Save(i3Path);
+
+
+            Email em = new Email(subject, mailBody, i3Path);
+
+            dataGridView2.Visible = false;
+
+            ShowGridView();
+            conn.Close();
+
+
+
+        }
+
+
+
+
+        public void YearDateStatement()
+        {
+            conn.Open();
+            dataGridView2.Visible = true;
+             
+            string qry = "SELECT * From Payments";
+            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Payments");
+            dataGridView2.DataSource = ds.Tables["Payments"];
+
+
+            string subject = "Year Payment Date Statement of  " + DateTime.Now;
+            string mailBody = "This is " + DateTime.Now + " Year Statement";
+
+
+
+
+
+            //Resize DataGridView to full height.
+            int height = dataGridView2.Height;
+            int width = dataGridView2.Width;
+
+            dataGridView2.Width = width + 100;
+            dataGridView2.Height = (dataGridView2.RowCount + 2) * dataGridView2.RowTemplate.Height;
+            // dataGridView1.Width = (dataGridView1.ColumnCount+1) * dataGridView1.Columns.;
+
+            //Create a Bitmap and draw the DataGridView on it.
+            Bitmap bitmap = new Bitmap(this.dataGridView2.Width-350, this.dataGridView2.Height);
+            dataGridView2.DrawToBitmap(bitmap, new Rectangle(0, 0, this.dataGridView2.Width, this.dataGridView2.Height));
+
+            //Resize DataGridView back to original height
+            dataGridView2.Height = height;
+            dataGridView2.Width = width;
+
+            //Save the Bitmap to folder.
+            const string i4Path = @"C:\ProgramData\GymManagementSoftware\YearDateStatement.png";
+            bitmap.Save(i4Path);
+
+
+            Email em = new Email(subject, mailBody, i4Path);
+
+            dataGridView2.Visible = false;
+
+            ShowGridView();
+            conn.Close();
 
 
 

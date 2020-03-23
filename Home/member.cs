@@ -30,308 +30,345 @@ namespace Home
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
 
-            picOutput.Image.Save(@"D:\Images\xx.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
-            //string imgLocation = "D:/Images/xx.jpeg";
 
-            string imgLocation = "";
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "All files(*.*)|*.*|jpg files(*.jpg)|*.jpg|png files(*.png)|*.png";
-            if (dialog.ShowDialog() == DialogResult.OK)
+
+            if (picOutput.Image == null)
             {
-                imgLocation = dialog.FileName.ToString();
-                picOutput.ImageLocation = imgLocation;
-            }
+                MessageBox.Show("Sorry...!!! Please Capture your Photo...");
 
-
-            byte[] images = null;
-              FileStream Streem = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-              BinaryReader brs = new BinaryReader(Streem);
-              images = brs.ReadBytes((int)Streem.Length);
-
-            */
-
-
-
-
-
-            
-
-            Image myImage = picOutput.Image;
-            byte[] data;
-            using (MemoryStream ms = new MemoryStream())
-            {
-                myImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                data = ms.ToArray();
-
-                //picOutput.Image.Save(@"D:\Images\xx.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
-
-            }
-
-            
-
-
-
-
-
-
-
-            string MemID = txtMemID.Text;
-            string Fname = txtName.Text;
-            string Pack = ValueOfCombo;
-            string Nic = txtNic.Text;
-            string Phone = txtTp.Text;
-            string Age = txtAge.Text;
-            string Add = txtAddress.Text;
-            string Height = txtHeight.Text;
-            string Weight = txtWeight.Text;
-            string Cid = txtCid.Text;
-            string Email = txtMail.Text;
-            string Gender;
-            
-
-
-
-
-
-
-
-            if (MemID == string.Empty && Fname == string.Empty && Nic == string.Empty && Pack == string.Empty && Phone == string.Empty && Add == string.Empty && Age == string.Empty && Weight == string.Empty && Height == string.Empty && Email == string.Empty && Cid == string.Empty)
-            {
-                MessageBox.Show("Some fileds are empty !!");
             }
             else
             {
-                if (Rmale.Checked)
+
+
+
+                Image myImage = picOutput.Image;
+                byte[] data;
+                using (MemoryStream ms = new MemoryStream())
                 {
-                    Gender = "Male";
+                    myImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    data = ms.ToArray();
+
+                    //picOutput.Image.Save(@"D:\Images\xx.bmp", System.Drawing.Imaging.ImageFormat.Bmp);
+
                 }
-                else
-                {
-                    Gender = "Female"; 
-                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                string MemID = txtMemID.Text;
+                string Fname = txtName.Text;
+                string Pack = ValueOfCombo;
+                string Nic = txtNic.Text;
+                string Phone = txtTp.Text;
+                string Age = txtAge.Text;
+                string Add = txtAddress.Text;
+                string Height = txtHeight.Text;
+                string Weight = txtWeight.Text;
+                string Cid = txtCid.Text;
+                string Email = txtMail.Text;
+                string Gender;
+
+
+
+
+
 
 
 
                 conn.Open();
-       
-                string query = "INSERT INTO MemDetails values('" + MemID + "','" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',@image,'" + Weight + "','"+Height+ "', '" + Age + "' ,'" + Cid + "')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.Add(new SqlParameter("@image", data));
+                string cdqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
+                SqlCommand cdcmd = new SqlCommand(cdqry, conn);
+                SqlDataReader cdreader = cdcmd.ExecuteReader();
 
 
-    
-
-
-                try
+                if (cdreader.Read())
                 {
-
-                    cmd.ExecuteNonQuery();
-                    //attcmd.ExecuteNonQuery();
-
-
-                    // MessageBox.Show("You are now Registerd...!!!");
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Something's Going wrong in EMP Reg...!  Plz Contact a Developer..." + ex);
-                }
-                finally
-                {
+                    MessageBox.Show("Sorry..!! Enterd Card is Already Exists..  Delete it if you are not using.");
+                    cdreader.Close();
                     conn.Close();
                 }
-
-
-
-                //Attendance Sheet reg
-
-
-
-
-
-
-
-                try
+                else
                 {
-                    conn.Open();
-                    string selqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
-                    SqlCommand selcmd = new SqlCommand(selqry, conn);
-                    SqlDataReader reader = selcmd.ExecuteReader();
-                    reader.Read();
-
-                    string EMPID = reader["EMP_ID"].ToString();
-                    reader.Close();
-
-                    string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','"+ Cid +"')";
-                    SqlCommand attcmd = new SqlCommand(attquery, conn);
-
-                    attcmd.ExecuteNonQuery();
-                    conn.Close();
-
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Something's Going wrong in Attendance sheet reg...!  Plz Contact a Developer...");
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show("" + x);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-
-
-
-
-                //Fees Table reg
-
-
-
-                try
-                {
-                    conn.Open();
-                    string selqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
-                    SqlCommand selcmd = new SqlCommand(selqry, conn);
-                    SqlDataReader reader = selcmd.ExecuteReader();
-                    reader.Read();
-
-                    string EMPID = reader["EMP_ID"].ToString();
-                    reader.Close();
-
-                    string attquery = "INSERT INTO Payments (EMPID,CardID,Name) values('" + EMPID + "','"+Cid+"','" + Fname + "')";
-
-                    SqlCommand attcmd = new SqlCommand(attquery, conn);
-
-                    attcmd.ExecuteNonQuery();
-                    conn.Close();
-
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer...");
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer..." + x);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-
-
-
-
-                //feeAmont
-
-
-                try
-                {
-                    conn.Open();
-                    string selqry2 = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
-                    SqlCommand selcmd2 = new SqlCommand(selqry2, conn);
-                    SqlDataReader reader2 = selcmd2.ExecuteReader();
-                    reader2.Read();
-
-                    string EMPID = reader2["EMP_ID"].ToString();
-                    reader2.Close();
-
-                    string attquery2 = "INSERT INTO PaymentFee (EMPID,CardID,Name) values('" + EMPID + "','" + Cid + "','" + Fname + "')";
-
-                    SqlCommand attcmd2 = new SqlCommand(attquery2, conn);
-
-                    attcmd2.ExecuteNonQuery();
-                    conn.Close();
-
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Something's Going wrong in Payment Fee reg...!  Plz Contact a Developer...");
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show("Something's Going wrong in Payment Fee reg...!  Plz Contact a Developer..." + x);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-
-
-
-
-
-
-
-
-
-
-
-                //Attendance Monthy table reg
-
-                try
-                {
-                    conn.Open();
-                    string selqry = "SELECT * FROM MemDetails where NIC = '" + Nic + "' ";
-                    SqlCommand selcmd = new SqlCommand(selqry, conn);
-                    SqlDataReader reader = selcmd.ExecuteReader();
-                    reader.Read();
-
-                    string EMPID = reader["EMP_ID"].ToString();
-                    reader.Close();
-
-                    //string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','0')";
-                    string attmonthquery = "INSERT INTO MonthlyAtt values('" + EMPID + "','" + Fname + "','" + Cid + "','0','0')";
-
-                    //SqlCommand attcmd = new SqlCommand(attquery, conn);
-                    SqlCommand attmonthcmd = new SqlCommand(attmonthquery, conn);
-
-                    //attcmd.ExecuteNonQuery();
-                    attmonthcmd.ExecuteNonQuery();
-
-
-
+                    cdreader.Close();
                     conn.Close();
 
 
-                    MessageBox.Show("You are now Registerd...!!!");
 
 
-                    txtName.Text = "";
-                    txtNic.Text = "";
-                    txtMemID.Text = "";
 
-                    txtAge.Text = "";
-                    txtTp.Text = "";
 
-                    txtAddress.Text = "";
-                    txtWeight.Text = "";
-                    txtHeight.Text = "";
-                    txtMail.Text = "";
-                    txtCid.Text = "";
-                    picOutput.Image = null;
 
+                    if (MemID == string.Empty && Fname == string.Empty && Nic == string.Empty && Pack == string.Empty && Phone == string.Empty && Add == string.Empty && Age == string.Empty && Weight == string.Empty && Height == string.Empty && Cid == string.Empty)
+                    {
+                        MessageBox.Show("Some fileds are empty !!");
+                    }
+                    else
+                    {
+                        if (Rmale.Checked)
+                        {
+                            Gender = "Male";
+                        }
+                        else
+                        {
+                            Gender = "Female";
+                        }
+
+
+
+
+
+
+
+
+                        conn.Open();
+
+                        string query = "INSERT INTO MemDetails values('" + MemID + "','" + Fname + "','" + Pack + "','" + Nic + "','" + Phone + "',' ','" + Add + "','" + Gender + "',@image,'" + Weight + "','" + Height + "', '" + Age + "' ,'" + Cid + "')";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.Add(new SqlParameter("@image", data));
+
+
+
+
+
+                        try
+                        {
+
+                            cmd.ExecuteNonQuery();
+                            //attcmd.ExecuteNonQuery();
+
+
+                            // MessageBox.Show("You are now Registerd...!!!");
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Something's Going wrong in EMP Reg...!  Plz Contact a Developer..." + ex);
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+
+
+
+                        //Attendance Sheet reg
+
+
+
+
+
+
+
+                        try
+                        {
+                            conn.Open();
+                            string selqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
+                            SqlCommand selcmd = new SqlCommand(selqry, conn);
+                            SqlDataReader reader = selcmd.ExecuteReader();
+                            reader.Read();
+
+                            string EMPID = reader["EMP_ID"].ToString();
+                            reader.Close();
+
+                            string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','" + Cid + "')";
+                            SqlCommand attcmd = new SqlCommand(attquery, conn);
+
+                            attcmd.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Something's Going wrong in Attendance sheet reg...!  Plz Contact a Developer...");
+                        }
+                        catch (Exception x)
+                        {
+                            MessageBox.Show("" + x);
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+
+
+
+
+                        //Fees Table reg
+
+
+
+                        try
+                        {
+                            conn.Open();
+                            string selqry = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
+                            SqlCommand selcmd = new SqlCommand(selqry, conn);
+                            SqlDataReader reader = selcmd.ExecuteReader();
+                            reader.Read();
+
+                            string EMPID = reader["EMP_ID"].ToString();
+                            reader.Close();
+
+                            string attquery = "INSERT INTO Payments (EMPID,CardID,Name) values('" + EMPID + "','" + Cid + "','" + Fname + "')";
+
+                            SqlCommand attcmd = new SqlCommand(attquery, conn);
+
+                            attcmd.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer...");
+                        }
+                        catch (Exception x)
+                        {
+                            MessageBox.Show("Something's Going wrong in Fees reg...!  Plz Contact a Developer..." + x);
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+
+
+
+
+                        //feeAmont
+
+
+                        try
+                        {
+                            conn.Open();
+                            string selqry2 = "SELECT * FROM MemDetails where CardID = '" + Cid + "' ";
+                            SqlCommand selcmd2 = new SqlCommand(selqry2, conn);
+                            SqlDataReader reader2 = selcmd2.ExecuteReader();
+                            reader2.Read();
+
+                            string EMPID = reader2["EMP_ID"].ToString();
+                            reader2.Close();
+
+                            string attquery2 = "INSERT INTO PaymentFee (EMPID,CardID,Name) values('" + EMPID + "','" + Cid + "','" + Fname + "')";
+
+                            SqlCommand attcmd2 = new SqlCommand(attquery2, conn);
+
+                            attcmd2.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Something's Going wrong in Payment Fee reg...!  Plz Contact a Developer...");
+                        }
+                        catch (Exception x)
+                        {
+                            MessageBox.Show("Something's Going wrong in Payment Fee reg...!  Plz Contact a Developer..." + x);
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+
+
+
+
+
+
+
+
+
+
+
+                        //Attendance Monthy table reg
+
+                        try
+                        {
+                            conn.Open();
+                            string selqry = "SELECT * FROM MemDetails where NIC = '" + Nic + "' ";
+                            SqlCommand selcmd = new SqlCommand(selqry, conn);
+                            SqlDataReader reader = selcmd.ExecuteReader();
+                            reader.Read();
+
+                            string EMPID = reader["EMP_ID"].ToString();
+                            reader.Close();
+
+                            //string attquery = "INSERT INTO Attendance values('" + EMPID + "','" + Fname + "','Absent','','','0','0','0')";
+                            string attmonthquery = "INSERT INTO MonthlyAtt values('" + EMPID + "','" + Fname + "','" + Cid + "','0','0')";
+
+                            //SqlCommand attcmd = new SqlCommand(attquery, conn);
+                            SqlCommand attmonthcmd = new SqlCommand(attmonthquery, conn);
+
+                            //attcmd.ExecuteNonQuery();
+                            attmonthcmd.ExecuteNonQuery();
+
+
+
+                            conn.Close();
+
+
+
+                            conn.Open();
+
+
+                            string qry = "SELECT EMP_ID,MemberID,FullName,Package,NIC,Gender,Age,Weight,Height From MemDetails";
+                            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+                            DataSet ds = new DataSet();
+
+                            da.Fill(ds, "MemDetails");
+                            dgvMembers.DataSource = ds.Tables["MemDetails"];
+
+
+
+                            conn.Close();
+
+
+                            MessageBox.Show("You are now Registerd...!!!");
+
+
+                            txtName.Text = "";
+                            txtNic.Text = "";
+                            txtMemID.Text = "";
+
+                            txtAge.Text = "";
+                            txtTp.Text = "";
+
+                            txtAddress.Text = "";
+                            txtWeight.Text = "";
+                            txtHeight.Text = "";
+                            txtMail.Text = "";
+                            txtCid.Text = "";
+                            picOutput.Image = null;
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            MessageBox.Show("Something's Going wrong in Monthly Attendance sheet...!  Plz Contact a Developer..." + ex);
+                        }
+                        catch (Exception x)
+                        {
+                            MessageBox.Show("Something's Going wrong in Monthly Attendance ..!  Plz Contact a Developer..." + x);
+                        }
+                        finally
+                        {
+                            conn.Close();
+
+
+                        }
+
+
+
+                    }
                 }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Something's Going wrong in Monthly Attendance sheet...!  Plz Contact a Developer..." + ex);
-                }
-                catch (Exception x)
-                {
-                    MessageBox.Show("Something's Going wrong in Monthly Attendance ..!  Plz Contact a Developer..." + x);
-                }
-                finally
-                {
-                    conn.Close();
-
-
-                }
-
-               
-
             }
 
 
@@ -418,6 +455,10 @@ namespace Home
         {
             ValueOfCombo = comboBox1.Text;
         }
+
+        private void button3_Click(object sender, EventArgs e) { }
+
+        
     }
     
 }

@@ -115,6 +115,7 @@ namespace Home
                 string attquery = "Delete from MemDetails where CardID = '" + textBox8.Text + "' OR EMP_ID = '" + textBox8.Text + "'";
                 string monthquery = "Delete from MonthlyAtt where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
                 string salquery = "Delete from Payments where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+                string salFeequery = "Delete from PaymentFee where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
 
                 SqlCommand maincmd = new SqlCommand(mainquery, conn);
                 maincmd.ExecuteNonQuery();
@@ -128,8 +129,11 @@ namespace Home
                 SqlCommand salcmd = new SqlCommand(salquery, conn);
                 salcmd.ExecuteNonQuery();
 
+                SqlCommand salFeecmd = new SqlCommand(salFeequery, conn);
+                salFeecmd.ExecuteNonQuery();
 
 
+            
                 MessageBox.Show(textBox8.Text + " is Deleted Successfully");
 
 
