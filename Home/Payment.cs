@@ -104,37 +104,53 @@ namespace Home
 
         private void button4_Click(object sender, EventArgs e)
         {
-            conn.Open();
-        
 
-            string payqry = "UPDATE Payments SET  "+ ValueOfCombo +" = '" + DateTime.Today + "' where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
-            SqlCommand cmdsl = new SqlCommand(payqry, conn);
-            cmdsl.ExecuteNonQuery();
+
+            if (textBox1.Text == string.Empty || comboBox2.Text == string.Empty || textBox8.Text == string.Empty)
+            {
+
+                MessageBox.Show("Sorry...!! Something Missing..!!!");
+            }
+            else
+            {
 
             
 
 
 
+                conn.Open();
 
 
-            //Showing Updated Result after refresh
-            string qry = "SELECT * From Payments where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
-            SqlDataAdapter da = new SqlDataAdapter(qry, conn);
-            DataSet ds = new DataSet();
-
-            da.Fill(ds, "Payments");
-            dgvFees.DataSource = ds.Tables["Payments"];
-
-            conn.Close();
-
-            insertAmount();
+                string payqry = "UPDATE Payments SET  " + ValueOfCombo + " = '" + DateTime.Today + "' where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+                SqlCommand cmdsl = new SqlCommand(payqry, conn);
+                cmdsl.ExecuteNonQuery();
 
 
-            if (checkBox1.Checked == true)
-            {
-                admitionFee();
+
+
+
+
+
+                //Showing Updated Result after refresh
+                string qry = "SELECT * From Payments where CardID = '" + textBox8.Text + "' OR EMPID = '" + textBox8.Text + "'";
+                SqlDataAdapter da = new SqlDataAdapter(qry, conn);
+                DataSet ds = new DataSet();
+
+                da.Fill(ds, "Payments");
+                dgvFees.DataSource = ds.Tables["Payments"];
+
+                conn.Close();
+
+                insertAmount();
+
+
+                if (checkBox1.Checked == true)
+                {
+                    admitionFee();
+                }
+
+                MessageBox.Show("Your Payment of " + ValueOfCombo + " Recorded Succesfully...!!! ");
             }
-
 
         }
 
@@ -147,7 +163,7 @@ namespace Home
             cmdsl.ExecuteNonQuery();
             conn.Close();
 
-            MessageBox.Show("Your Payment of " + ValueOfCombo + " Recorded Succesfully...!!! ");
+            
 
         }
 

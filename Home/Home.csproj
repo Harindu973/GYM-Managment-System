@@ -81,6 +81,13 @@
     <Compile Include="Attendance_Recods.Designer.cs">
       <DependentUpon>Attendance_Recods.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckPayment.cs" />
+    <Compile Include="Danger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danger.Designer.cs">
+      <DependentUpon>Danger.cs</DependentUpon>
+    </Compile>
     <Compile Include="dasboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,11 +170,26 @@
     <Compile Include="staff1.Designer.cs">
       <DependentUpon>staff1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Alert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Alert.Designer.cs">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warning.Designer.cs">
+      <DependentUpon>Warning.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Attendance_Mark.resx">
       <DependentUpon>Attendance_Mark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Attendance_Recods.resx">
       <DependentUpon>Attendance_Recods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danger.resx">
+      <DependentUpon>Danger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dasboard.resx">
       <DependentUpon>dasboard.cs</DependentUpon>
@@ -217,6 +239,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="staff1.resx">
       <DependentUpon>staff1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Alert.resx">
+      <DependentUpon>Form_Alert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warning.resx">
+      <DependentUpon>Warning.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />

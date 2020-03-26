@@ -118,3 +118,6 @@ C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\bin\Debug\zh-tw\ZedGr
 C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.csproj.CopyComplete
 C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.exe
 C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.pdb
+C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.Form_Alert.resources
+C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.Danger.resources
+C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Home\obj\Debug\Home.Warning.resources
