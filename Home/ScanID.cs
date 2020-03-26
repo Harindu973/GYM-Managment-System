@@ -42,55 +42,69 @@ namespace Home
         {
             string Cid = textBox1.Text;
 
+           
+
             if (e.KeyChar == (char)Keys.Enter || e.KeyChar == 13)
             {
-                ScanID_Load(sender, e);
-                conn.Open();
+                CheckPayment cp = new CheckPayment();
+                int result = cp.Check(Cid);
 
-                string selqry = "SELECT * FROM Attendance where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
-                SqlCommand selcmd = new SqlCommand(selqry, conn);
-                SqlDataReader reader = selcmd.ExecuteReader();
-                reader.Read();
-
-                string att = reader["Attended"].ToString();
-                var arriveT = Convert.ToDateTime(reader["Arrive"]);
-                var leaveT = DateTime.Now;
-             
-
-
-                var timespan = leaveT.Subtract(arriveT).TotalSeconds;
-                var timespanMin = timespan / 60;
-
-                reader.Close();
-
-                if (att == "Present   ")
+                if (result == 1 || result == 2)
                 {
 
-                    string attLeaveqry = "UPDATE Attendance SET Leave = '" + DateTime.Now + "', Minutes = '"+ timespanMin +"' where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
-                    SqlCommand cmdLeave = new SqlCommand(attLeaveqry, conn);
-                    cmdLeave.ExecuteNonQuery();
+
+
+                    //ScanID_Load(sender, e);
+                    conn.Open();
+
+                    string selqry = "SELECT * FROM Attendance where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
+                    SqlCommand selcmd = new SqlCommand(selqry, conn);
+                    SqlDataReader reader = selcmd.ExecuteReader();
+                    reader.Read();
+
+                    string att = reader["Attended"].ToString();
+                    var arriveT = Convert.ToDateTime(reader["Arrive"]);
+                    var leaveT = DateTime.Now;
+
+
+
+                    var timespan = leaveT.Subtract(arriveT).TotalSeconds;
+                    var timespanMin = timespan / 60;
+
+                    reader.Close();
+
+                    if (att == "Present   ")
+                    {
+
+                        string attLeaveqry = "UPDATE Attendance SET Leave = '" + DateTime.Now + "', Minutes = '" + timespanMin + "' where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
+                        SqlCommand cmdLeave = new SqlCommand(attLeaveqry, conn);
+                        cmdLeave.ExecuteNonQuery();
+
+                    }
+                    else
+                    {
+                        string attArriveqry = "UPDATE Attendance SET Arrive = '" + DateTime.Now + "', Attended = 'Present', Mark = '1' where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
+                        SqlCommand cmdArrive = new SqlCommand(attArriveqry, conn);
+                        cmdArrive.ExecuteNonQuery();
+                    }
+
 
                 }
-                else
-                {
-                    string attArriveqry = "UPDATE Attendance SET Arrive = '" + DateTime.Now + "', Attended = 'Present', Mark = '1' where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
-                    SqlCommand cmdArrive = new SqlCommand(attArriveqry, conn);
-                    cmdArrive.ExecuteNonQuery();
-                }
+
 
 
 
 
                 conn.Close();
                 textBox1.Text = null;
-                ScanID_Load(sender, e);
-                textBox1.Focus();
+               // ScanID_Load(sender, e);
+               // textBox1.Focus();
 
             }
                 
         }
 
-        private void ScanID_Load(object sender, EventArgs e)
+        public void ScanID_Load(object sender, EventArgs e)
         {
 
             dataGridView2.Visible = false;
@@ -100,7 +114,7 @@ namespace Home
 
 
 
-            textBox1.Focus();
+           // textBox1.Focus();
 
             ShowGridView();
 
@@ -563,10 +577,16 @@ namespace Home
             da.Fill(ds, "Attendance");
             dataGridView1.DataSource = ds.Tables["Attendance"];
 
-
+             
 
             conn.Close();
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form_Alert su = new Form_Alert();
+            su.Show();
         }
     }
 }
