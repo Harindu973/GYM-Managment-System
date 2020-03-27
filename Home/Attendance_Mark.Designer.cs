@@ -40,9 +40,11 @@
             // 
             // dgvMark
             // 
+            this.dgvMark.AllowUserToDeleteRows = false;
             this.dgvMark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMark.Location = new System.Drawing.Point(106, 196);
             this.dgvMark.Name = "dgvMark";
+            this.dgvMark.ReadOnly = true;
             this.dgvMark.RowTemplate.Height = 24;
             this.dgvMark.Size = new System.Drawing.Size(882, 671);
             this.dgvMark.TabIndex = 0;

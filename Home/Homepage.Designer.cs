@@ -580,6 +580,7 @@
             this.dasboard1.Name = "dasboard1";
             this.dasboard1.Size = new System.Drawing.Size(1102, 958);
             this.dasboard1.TabIndex = 36;
+            this.dasboard1.Load += new System.EventHandler(this.dasboard1_Load);
             // 
             // selling_Recods1
             // 
@@ -658,7 +659,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 1102);
+            this.ClientSize = new System.Drawing.Size(1319, 1055);
             this.Controls.Add(this.dasboard1);
             this.Controls.Add(this.selling_Recods1);
             this.Controls.Add(this.panel4);

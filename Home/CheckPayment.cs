@@ -30,6 +30,11 @@ namespace Home
             cmdpay.ExecuteNonQuery();
 
 
+            string payqry2 = "UPDATE PaymentFee SET " + R1month + " = '0.00', " + R2month + " = '0.00'  where CardID = '" + Cid + "' OR EMPID = '" + Cid + "'";
+            SqlCommand cmdpay2 = new SqlCommand(payqry2, conn);
+            cmdpay2.ExecuteNonQuery();
+
+
 
 
 
@@ -71,6 +76,8 @@ namespace Home
                 {
 
                     DateTime paidDate = Convert.ToDateTime(ABreader[CPmonth]);
+
+                    
 
                     //var date = DateTime.Now.Date - paidDate;
                     DateTime expdate = paidDate.AddMonths(1).AddDays(7);

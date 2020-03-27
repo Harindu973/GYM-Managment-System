@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Home
 {
     public partial class Homepage : Form
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Asus\OneDrive\Forcus\FO-GYM-Managment-System\Database\Gym.mdf;Integrated Security=True;Connect Timeout=30");
+
         private bool isCollapsed;
         public Homepage()
         {
@@ -212,6 +215,14 @@ namespace Home
             ScanID a1 = new ScanID();
             a1.Show();
             
+        }
+
+        private void dasboard1_Load(object sender, EventArgs e)
+        {
+
+           
+
+
         }
     }
 }

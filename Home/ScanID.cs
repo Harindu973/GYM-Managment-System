@@ -97,8 +97,10 @@ namespace Home
 
                 conn.Close();
                 textBox1.Text = null;
-               // ScanID_Load(sender, e);
-               // textBox1.Focus();
+                dasboard db = new dasboard();
+                db.Refresh();
+                // ScanID_Load(sender, e);
+                // textBox1.Focus();
 
             }
                 
@@ -399,6 +401,8 @@ namespace Home
 
             MonthStatement();
             MessageBox.Show("Last Month Collected... Check Your Email for the statement...");
+
+
         }
 
 
@@ -585,8 +589,12 @@ namespace Home
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form_Alert su = new Form_Alert();
-            su.Show();
+
+        }
+
+        private void ScanID_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }
