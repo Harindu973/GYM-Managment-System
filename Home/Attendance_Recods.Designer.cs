@@ -40,11 +40,13 @@
             // 
             // dgvAttRec
             // 
+            this.dgvAttRec.AllowUserToDeleteRows = false;
             this.dgvAttRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAttRec.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAttRec.Location = new System.Drawing.Point(120, 140);
             this.dgvAttRec.Name = "dgvAttRec";
+            this.dgvAttRec.ReadOnly = true;
             this.dgvAttRec.RowTemplate.Height = 24;
             this.dgvAttRec.Size = new System.Drawing.Size(521, 725);
             this.dgvAttRec.TabIndex = 0;
