@@ -51,7 +51,7 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.Firebrick;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.panel13.Location = new System.Drawing.Point(141, 163);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(292, 3);
@@ -63,7 +63,7 @@
             this.textBox8.BackColor = System.Drawing.SystemColors.Control;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.Font = new System.Drawing.Font("Segoe UI Symbol", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Firebrick;
+            this.textBox8.ForeColor = System.Drawing.Color.Black;
             this.textBox8.Location = new System.Drawing.Point(141, 123);
             this.textBox8.MaxLength = 10;
             this.textBox8.Name = "textBox8";
@@ -76,6 +76,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.Control;
             this.label11.Location = new System.Drawing.Point(136, 76);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 28);
@@ -96,8 +97,9 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
@@ -111,8 +113,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
@@ -140,6 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvFees);
