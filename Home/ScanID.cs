@@ -92,15 +92,22 @@ namespace Home
                 }
 
 
+                ShowGridView();
 
 
-
-                conn.Close();
+                
                 textBox1.Text = null;
                 dasboard db = new dasboard();
                 db.Refresh();
                 // ScanID_Load(sender, e);
                 // textBox1.Focus();
+
+
+
+
+
+
+                conn.Close();
 
             }
                 
