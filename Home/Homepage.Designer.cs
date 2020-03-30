@@ -104,7 +104,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.Maroon;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label8);
@@ -237,7 +237,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Maroon;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Controls.Add(this.pictureBox7);
             this.panel4.Controls.Add(this.pictureBox5);
@@ -319,11 +319,11 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.panel1.Controls.Add(this.button8);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 293);
+            this.panel1.Size = new System.Drawing.Size(222, 293);
             this.panel1.TabIndex = 26;
             // 
             // button8
@@ -340,14 +340,14 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Maroon;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.flowLayoutPanel1.Controls.Add(this.panelDropDown);
             this.flowLayoutPanel1.Controls.Add(this.button11);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-1, 292);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, 292);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(220, 810);
             this.flowLayoutPanel1.TabIndex = 27;
@@ -398,7 +398,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.Maroon;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -417,7 +417,7 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.Maroon;
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -496,7 +496,7 @@
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.Maroon;
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button14.Dock = System.Windows.Forms.DockStyle.Top;
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -515,7 +515,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Maroon;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -533,7 +533,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Maroon;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -551,7 +551,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -576,6 +576,7 @@
             // 
             this.dasboard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dasboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.dasboard1.Location = new System.Drawing.Point(222, 144);
             this.dasboard1.Name = "dasboard1";
             this.dasboard1.Size = new System.Drawing.Size(1102, 958);
@@ -595,6 +596,7 @@
             // 
             this.feesRecodscs1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.feesRecodscs1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.feesRecodscs1.Location = new System.Drawing.Point(222, 144);
             this.feesRecodscs1.Name = "feesRecodscs1";
             this.feesRecodscs1.Size = new System.Drawing.Size(1102, 958);
@@ -613,6 +615,7 @@
             // 
             this.attendance_Recods1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.attendance_Recods1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.attendance_Recods1.Location = new System.Drawing.Point(223, 144);
             this.attendance_Recods1.Name = "attendance_Recods1";
             this.attendance_Recods1.Size = new System.Drawing.Size(1102, 958);
@@ -622,6 +625,7 @@
             // 
             this.staff11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.staff11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.staff11.Location = new System.Drawing.Point(222, 144);
             this.staff11.Name = "staff11";
             this.staff11.Size = new System.Drawing.Size(1102, 958);
@@ -631,6 +635,7 @@
             // 
             this.payment1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.payment1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.payment1.Location = new System.Drawing.Point(223, 144);
             this.payment1.Name = "payment1";
             this.payment1.Size = new System.Drawing.Size(1102, 958);
@@ -640,6 +645,7 @@
             // 
             this.member1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.member1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.member1.Location = new System.Drawing.Point(223, 144);
             this.member1.Name = "member1";
             this.member1.Size = new System.Drawing.Size(1102, 958);
@@ -650,6 +656,7 @@
             // 
             this.sms1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.sms1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.sms1.Location = new System.Drawing.Point(223, 144);
             this.sms1.Name = "sms1";
             this.sms1.Size = new System.Drawing.Size(1102, 958);
@@ -659,6 +666,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1319, 1055);
             this.Controls.Add(this.dasboard1);
             this.Controls.Add(this.selling_Recods1);
