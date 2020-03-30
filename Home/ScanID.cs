@@ -92,23 +92,15 @@ namespace Home
                 }
 
 
+
                 ShowGridView();
 
 
-                
                 textBox1.Text = null;
                 dasboard db = new dasboard();
-                db.Refresh();
-                // ScanID_Load(sender, e);
-                // textBox1.Focus();
-
-
-
-
-
-
+                db.RefreshDash();
+     
                 conn.Close();
-
             }
                 
         }
@@ -594,13 +586,15 @@ namespace Home
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void ScanID_FormClosing(object sender, FormClosingEventArgs e)
         {
+            dasboard da = new dasboard();
+            da.RefreshDash();
+
+
+
 
         }
     }
