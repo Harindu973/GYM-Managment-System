@@ -32,11 +32,11 @@ namespace Home
 
         public void dasboard_Load(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshDash();
 
         }
 
-        public void Refresh()
+        public void RefreshDash()
         {
             conn.Open();
 
@@ -103,9 +103,11 @@ namespace Home
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshDash();
         }
     }
 }
