@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO.Ports;
+using System.Threading;
 
 namespace Home
 {
@@ -67,5 +69,38 @@ namespace Home
         {
            textBox1.Text = button1.Text;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SerialPort sp = new SerialPort();
+            sp.PortName = "COM3"; // change the port name
+            sp.Open();
+            sp.WriteLine("AT" + Environment.NewLine);
+            Thread.Sleep(100);
+            sp.WriteLine("AT+CMGF=1" + Environment.NewLine);
+            Thread.Sleep(100);
+            sp.WriteLine("AT+CSCS=\"GSM\"" + Environment.NewLine);
+            Thread.Sleep(100);
+            sp.WriteLine("AT+CMGS=\"" + textBox2.Text + "\"" + Environment.NewLine);
+            Thread.Sleep(100);
+            sp.WriteLine(textBox1.Text + Environment.NewLine);
+            Thread.Sleep(100);
+            sp.Write(new byte[] { 26 }, 0, 1);
+            Thread.Sleep(100);
+
+            var response = sp.ReadExisting();
+            if (response.Contains("ERROR"))
+            {
+                MessageBox.Show("Failed!");
+
+
+            }
+            else
+            {
+                MessageBox.Show("Sent!");
+            }
+            sp.Close();
+        }
     }
+    
 }
